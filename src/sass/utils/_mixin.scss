@@ -59,8 +59,36 @@ p {
     @content;
   }
 }
+
 .foo {
   @include when-inside('.active') {
     animation: fadeIn 0.3s 1s forwards;
+  }
+}
+
+//方便的媒体查询
+$breakpoints: (
+  'sm': 'only screen and  (min-width: 480px)',
+  'md': 'only screen and ( min-width: 768px)',
+  'lg': 'only screen and ( min-width: 992px)'
+) !default;
+
+
+@mixin respond-to($breakpoint) {
+  $query: map-get($breakpoints, $breakpoint);
+  
+  @if not $query {
+    @error 'No value found for `#{$breakpoint}`. Please make sure it is defined in `$breakpoints` map.';
+  }
+
+  @media #{if(type-of($query) == 'string', unquote($query), inspect($query))} {
+    @content;
+  }
+}
+
+.foo {
+  @include respond-to('sm') {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
