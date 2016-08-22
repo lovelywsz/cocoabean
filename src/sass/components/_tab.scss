@@ -1,0 +1,86 @@
+h3{
+        line-height: 36px;
+        height: 36px;
+        padding-left: 20px;
+        background: #f2f2f2;
+        margin:20px 0;
+    }
+    .f-icon {
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: #31BBEE;flex:none;
+    }
+    .f-btn{
+        width: 50px;
+        height:25px;
+        text-align: center;
+        background: #31BBEE;
+        margin: 10px;
+        line-height: 25px;
+        color: #fff;
+        /*子元素默认是可以伸缩的，需要写flex:none来禁止伸缩;
+        */flex:none;
+    }
+    h2{
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .flex-cont{
+        /*定义为flexbox*/
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+    }
+    .flex-item{
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        width: 0%;
+    }
+
+    /*tab*/
+    .flex-tab {
+        margin:10px 0;
+        width: 100%;
+        height: 44px;
+        line-height: 44px;
+        background-color: #FFF;
+        /*子元素沿主轴对齐方式均分*/
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        /*子元素沿侧轴对齐方式垂直居中*/
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .flex-tab li{
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        width:0%;
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        color: #777;
+        font-size: 16px;
+        box-shadow: inset 0px -1px 1px -1px #c8c7cc;   
+    }
+    .flex-tab li a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .flex-tab li .tab-title{
+        display: inline-block;
+        text-align: center;
+        font-size: 16px;
+        color: #777;
+    }
+    .flex-tab li.current .tab-title{
+        color: #ff8200;
+        border-bottom: 2px solid #ffa500;
+    }
