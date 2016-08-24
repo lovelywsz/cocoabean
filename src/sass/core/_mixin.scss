@@ -1,11 +1,13 @@
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
+/*处理1px border*/
+@mixin border($bdv,$w,$s,$c){
+  #{$bdv}: $w $s $c;
+  @at-root .iosx2 &{
+       #{$bdv}: $w/2 $s $c;
+  }
+  @at-root .iosx3 &{
+       #{$bdv}: $w/2.8 $s $c;
+  }
 }
-
-.box { @include border-radius(10px); }
 
 //Absolute Position
 @mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {

@@ -1,0 +1,22 @@
+$svgSpritPath: "../../dist/images/sprite";
+$imageIcon:"m-icon";
+$spriteWidth:pxToEm(30px);
+$spriteHeight:auto;
+
+@mixin svgGet($file, $type, $width, $height) {
+  background-image: url($file + '.' + $type);
+  background-size: $width $height;
+}
+.#{$imageIcon} {
+    display: inline-block;
+    vertical-align: top;
+    @include svgGet('#{$svgSpritPath}', 'svg', $spriteWidth,$spriteHeight);
+    width: pxToEm(10px);
+    height: pxToEm(10px);
+}
+$sprite: yellow bluev;
+@each $icon in $sprite {
+    .#{$imageIcon}-#{$icon} {  
+        background-position:pxToEm(-10px) pxToEm(-10px)-((index($sprite,$icon)-1)*pxToEm(30px));
+    }
+}

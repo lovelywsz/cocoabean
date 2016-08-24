@@ -53,25 +53,10 @@ video {
   display: inline-block; }
 
 /**
- * Add the correct display in iOS 4-7.
- */
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
-/**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 progress {
   vertical-align: baseline; }
-
-/**
- * Add the correct display in IE 10-.
- * 1. Add the correct display in IE.
- */
-template,
-[hidden] {
-  display: none; }
 
 /* Links
    ========================================================================== */
@@ -96,18 +81,6 @@ a:hover {
 /* Text-level semantics
    ========================================================================== */
 /**
- * 1. Remove the bottom border in Firefox 39-.
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */ }
-
-/**
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
 b,
@@ -120,12 +93,6 @@ strong {
 b,
 strong {
   font-weight: bolder; }
-
-/**
- * Add the correct font style in Android 4.3-.
- */
-dfn {
-  font-style: italic; }
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -182,19 +149,6 @@ svg:not(:root) {
 /* Grouping content
    ========================================================================== */
 /**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */ }
-
-/**
  * Add the correct margin in IE 8.
  */
 figure {
@@ -220,19 +174,12 @@ hr {
  */
 button,
 input,
-optgroup,
 select,
 textarea {
   font: inherit;
   /* 1 */
   margin: 0;
   /* 2 */ }
-
-/**
- * Restore the font weight unset by the previous rule.
- */
-optgroup {
-  font-weight: bold; }
 
 /**
  * Show the overflow in IE.
@@ -368,6 +315,25 @@ textarea {
   /* 1 */
   font: inherit;
   /* 2 */ }
+
+h1, h2, h3, h4, h5, h6, p, figure, form, blockquote {
+  margin: 0; }
+
+ul, ol, li, dl, dd {
+  margin: 0;
+  padding: 0; }
+
+ul, ol {
+  list-style: none outside none; }
+
+i {
+  font-style: normal; }
+
+input:focus {
+  outline: none; }
+
+* {
+  box-sizing: border-box; }
 
 h3 {
   line-height: 36px;
