@@ -1,0 +1,32 @@
+/**
+ * icon font
+ */
+ /*Font Name*/
+$font-family-name:"cocofont";
+/*Font Path*/
+$font-file-path: "../../../dist/iconfont/cocofont";
+/*Font Class Prefix*/
+$front-icon-font : "m-font" ;
+
+@font-face {
+    font-family: '#{$font-family-name}';
+    src: url('#{$font-file-path}.woff2') format('woff2'),
+         url('#{$font-file-path}.woff') format('woff'),
+         url('#{$font-file-path}.svg') format('svg'),
+         url('#{$font-file-path}.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.#{$front-icon-font}{
+    font-family: '#{$font-family-name}';
+    display:inline-block;
+    //color:$baseFontIconColor;
+    -webkit-font-smoothing:antialiased;
+}
+/*arrow right chart 1*/
+.#{$front-icon-font}action{
+    &::before{content:"\EA01";}
+}
+.#{$front-icon-font}add{
+    &::before{content:"\EA06";}
+}

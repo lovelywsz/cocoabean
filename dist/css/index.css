@@ -316,19 +316,7 @@ textarea {
   font: inherit;
   /* 2 */ }
 
-html, body, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, address, big, cite, code,
-del, dfn, em, img, ins, q, s, samp,
-small, strike, strong, sub, sup,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+dl, dt, dd, ol, ul, li {
   margin: 0;
   padding: 0;
   border: 0;
@@ -341,6 +329,9 @@ ul, ol {
 
 input:focus {
   outline: none; }
+
+a {
+  text-decoration: none; }
 
 * {
   box-sizing: border-box; }
@@ -385,6 +376,30 @@ p {
   .foo {
     padding-left: 20px;
     padding-right: 20px; } }
+
+/**
+ * icon font
+ */
+/*Font Name*/
+/*Font Path*/
+/*Font Class Prefix*/
+@font-face {
+  font-family: "cocofont";
+  src: url("../../../dist/iconfont/cocofont.woff2") format("woff2"), url("../../../dist/iconfont/cocofont.woff") format("woff"), url("../../../dist/iconfont/cocofont.svg") format("svg"), url("../../../dist/iconfont/cocofont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+.m-font {
+  font-family: "cocofont";
+  display: inline-block;
+  -webkit-font-smoothing: antialiased; }
+
+/*arrow right chart 1*/
+.m-fontaction::before {
+  content: "\EA01"; }
+
+.m-fontadd::before {
+  content: "\EA06"; }
 
 /**
  * panel
@@ -450,263 +465,3 @@ p {
   height: 50px;
   margin-right: 10px;
   background: #31BBEE; }
-
-/**
- * button
- */
-/*Colors*/
-[class^="m-btn"] {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none; }
-
-.m-btn {
-  text-align: center;
-  line-height: 2.5rem;
-  height: 2.5rem;
-  font-size: 0.875rem;
-  border-radius: 0.1875rem;
-  outline: 0;
-  display: inline-block;
-  min-width: 4.375rem;
-  box-sizing: border-box;
-  padding: 0; }
-  .m-btn.m-btn-block {
-    width: 100%;
-    display: block; }
-
-.m-btn-round {
-  display: inline-block;
-  box-sizing: border-box;
-  border-radius: 50%;
-  width: 0.625em;
-  height: 0.625em;
-  font-size: 1.8rem;
-  position: relative; }
-  .m-btn-round:active .m-font {
-    opacity: 0.6; }
-  .m-btn-round .m-font {
-    font-size: 0.375em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff; }
-
-.m-btn-large {
-  font-size: 2.2rem; }
-
-.m-btn-media {
-  font-size: 3.4rem;
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2); }
-  .m-btn-media .m-font {
-    font-size: 0.25em; }
-  .m-btn-media .m-font-play {
-    margin-left: 0.125em; }
-  .m-btn-media:active .m-font {
-    opacity: 1; }
-
-/*按钮名称 文字色 背景色 边框大小 边框颜色 激活色 激活边框*/
-.m-btn-red {
-  color: #fff;
-  background: linear-gradient(to bottom, #f73b3b 0%, #f83232 100%);
-  border: 0 solid transparent; }
-  .iosx2 .m-btn-red {
-    border: 0 solid transparent; }
-  .iosx3 .m-btn-red {
-    border: 0 solid transparent; }
-  .m-btn-red:active {
-    background: linear-gradient(to bottom, #d93434 0%, #d92b2b 100%);
-    border-color: transparent; }
-  .m-btn-red:disabled, .m-btn-red.m-btn-disabled {
-    color: rgba(255, 255, 255, 0.3); }
-  .m-btn-red:disabled:active, .m-btn-red.m-btn-disabled:active {
-    background: linear-gradient(to bottom, #f73b3b 0%, #f83232 100%);
-    border-color: transparent; }
-
-.m-btn-green {
-  color: #fff;
-  background: linear-gradient(to bottom, #18b52a 0%, #10b524 100%);
-  border: 0 solid transparent; }
-  .iosx2 .m-btn-green {
-    border: 0 solid transparent; }
-  .iosx3 .m-btn-green {
-    border: 0 solid transparent; }
-  .m-btn-green:active {
-    background: linear-gradient(to bottom, #149623 0%, #0e961e 100%);
-    border-color: transparent; }
-  .m-btn-green:disabled, .m-btn-green.m-btn-disabled {
-    color: rgba(255, 255, 255, 0.3); }
-  .m-btn-green:disabled:active, .m-btn-green.m-btn-disabled:active {
-    background: linear-gradient(to bottom, #18b52a 0%, #10b524 100%);
-    border-color: transparent; }
-
-.m-btn-orange {
-  color: #fff;
-  background: linear-gradient(to bottom, #ff890a 0%, #ff8200 100%);
-  border: 0 solid transparent; }
-  .iosx2 .m-btn-orange {
-    border: 0 solid transparent; }
-  .iosx3 .m-btn-orange {
-    border: 0 solid transparent; }
-  .m-btn-orange:active {
-    background: linear-gradient(to bottom, #e07809 0%, #e07400 100%);
-    border-color: transparent; }
-  .m-btn-orange:disabled, .m-btn-orange.m-btn-disabled {
-    color: rgba(255, 255, 255, 0.3); }
-  .m-btn-orange:disabled:active, .m-btn-orange.m-btn-disabled:active {
-    background: linear-gradient(to bottom, #ff890a 0%, #ff8200 100%);
-    border-color: transparent; }
-
-.m-btn-blue {
-  color: #fff;
-  background: linear-gradient(to bottom, #1a90ff 0%, #108cff 100%);
-  border: 0 solid transparent; }
-  .iosx2 .m-btn-blue {
-    border: 0 solid transparent; }
-  .iosx3 .m-btn-blue {
-    border: 0 solid transparent; }
-  .m-btn-blue:active {
-    background: linear-gradient(to bottom, #167fe0 0%, #0d7ae0 100%);
-    border-color: transparent; }
-  .m-btn-blue:disabled, .m-btn-blue.m-btn-disabled {
-    color: rgba(255, 255, 255, 0.3); }
-  .m-btn-blue:disabled:active, .m-btn-blue.m-btn-disabled:active {
-    background: linear-gradient(to bottom, #1a90ff 0%, #108cff 100%);
-    border-color: transparent; }
-
-.m-btn-white {
-  color: #787878;
-  background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
-  border: 1px solid #ccc; }
-  .iosx2 .m-btn-white {
-    border: 0.5px solid #ccc; }
-  .iosx3 .m-btn-white {
-    border: 0.35714px solid #ccc; }
-  .m-btn-white:active {
-    background: linear-gradient(to bottom, #e0e0e0 0%, #dbdbdb 100%);
-    border-color: #adadad; }
-  .m-btn-white:disabled, .m-btn-white.m-btn-disabled {
-    color: rgba(120, 120, 120, 0.3); }
-  .m-btn-white:disabled:active, .m-btn-white.m-btn-disabled:active {
-    background: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
-    border-color: #ccc; }
-
-.m-btn-ltgreen {
-  color: #fff;
-  background: #29c944;
-  border: 0 solid transparent; }
-  .iosx2 .m-btn-ltgreen {
-    border: 0 solid transparent; }
-  .iosx3 .m-btn-ltgreen {
-    border: 0 solid transparent; }
-  .m-btn-ltgreen:active {
-    background: #1f9733;
-    border-color: #1f9733; }
-  .m-btn-ltgreen:disabled, .m-btn-ltgreen.m-btn-disabled {
-    color: rgba(255, 255, 255, 0.3); }
-  .m-btn-ltgreen:disabled:active, .m-btn-ltgreen.m-btn-disabled:active {
-    background: #29c944;
-    border-color: transparent; }
-
-.m-btn-ltred {
-  color: #fff;
-  background: #ef3f1e;
-  border: 0 solid transparent; }
-  .iosx2 .m-btn-ltred {
-    border: 0 solid transparent; }
-  .iosx3 .m-btn-ltred {
-    border: 0 solid transparent; }
-  .m-btn-ltred:active {
-    background: #b32f16;
-    border-color: #b32f16; }
-  .m-btn-ltred:disabled, .m-btn-ltred.m-btn-disabled {
-    color: rgba(255, 255, 255, 0.3); }
-  .m-btn-ltred:disabled:active, .m-btn-ltred.m-btn-disabled:active {
-    background: #ef3f1e;
-    border-color: transparent; }
-
-.m-btn-bdgreen {
-  color: #fff;
-  background: #29c944;
-  border: 1px solid #fff; }
-  .iosx2 .m-btn-bdgreen {
-    border: 0.5px solid #fff; }
-  .iosx3 .m-btn-bdgreen {
-    border: 0.35714px solid #fff; }
-  .m-btn-bdgreen:active {
-    background: #1f9733;
-    border-color: #bfbfbf; }
-  .m-btn-bdgreen:disabled, .m-btn-bdgreen.m-btn-disabled {
-    color: rgba(255, 255, 255, 0.3); }
-  .m-btn-bdgreen:disabled:active, .m-btn-bdgreen.m-btn-disabled:active {
-    background: #29c944;
-    border-color: #fff; }
-
-.m-btn-gray {
-  color: #fff;
-  background: #797979;
-  border: 0 solid transparent; }
-  .iosx2 .m-btn-gray {
-    border: 0 solid transparent; }
-  .iosx3 .m-btn-gray {
-    border: 0 solid transparent; }
-  .m-btn-gray:active {
-    background: #bdbdbd;
-    border-color: #bdbdbd; }
-  .m-btn-gray:disabled, .m-btn-gray.m-btn-disabled {
-    color: rgba(255, 255, 255, 0.3); }
-  .m-btn-gray:disabled:active, .m-btn-gray.m-btn-disabled:active {
-    background: #797979;
-    border-color: transparent; }
-
-.m-btn-mblack {
-  color: #fff;
-  background: rgba(0, 0, 0, 0.3);
-  border: 0.0625rem solid #fff; }
-  .iosx2 .m-btn-mblack {
-    border: 0.03125rem solid #fff; }
-  .iosx3 .m-btn-mblack {
-    border: 0.02232rem solid #fff; }
-  .m-btn-mblack:active {
-    background: rgba(0, 0, 0, 0.3);
-    border-color: #fff; }
-  .m-btn-mblack:disabled, .m-btn-mblack.m-btn-disabled {
-    color: rgba(255, 255, 255, 0.3); }
-  .m-btn-mblack:disabled:active, .m-btn-mblack.m-btn-disabled:active {
-    background: rgba(0, 0, 0, 0.3);
-    border-color: #fff; }
-
-.m-btn-myellow {
-  color: #fff;
-  background: #faa247;
-  border: 1px solid #fff; }
-  .iosx2 .m-btn-myellow {
-    border: 0.5px solid #fff; }
-  .iosx3 .m-btn-myellow {
-    border: 0.35714px solid #fff; }
-  .m-btn-myellow:active {
-    background: #faa247;
-    border-color: #fff; }
-  .m-btn-myellow:disabled, .m-btn-myellow.m-btn-disabled {
-    color: rgba(255, 255, 255, 0.3); }
-  .m-btn-myellow:disabled:active, .m-btn-myellow.m-btn-disabled:active {
-    background: #faa247;
-    border-color: #fff; }
-
-.m-btn-white.m-btn-text-orange {
-  color: #FF8200; }
-
-.m-btn-white.m-btn-text-green {
-  color: #10B524; }
-
-.m-btn-white.m-btn-text-red {
-  color: #e14123; }
-
-.m-btn-white.m-btn-text-blue {
-  color: #108cff; }
-
-.m-btn-bdgreen .m-font {
-  font-size: 0.4375em; }
-
-.m-btn-gray {
-  font-size: 1.6rem; }

@@ -4,8 +4,8 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),//前缀
     browserSync = require('browser-sync'),//同步
     reload = browserSync.reload,
-    svgSprite = require('gulp-svg-sprite');//svg拼图
-    
+    iconFont = require('gulp-iconfont'),//字体图标
+    svgSprite = require('gulp-svg-sprite');//svg拼图 
 
 //定义文件路径
 var paths = {
@@ -20,6 +20,10 @@ var paths = {
     html: {
         src  : 'src/html/**/*.html',
         dest : ''
+    },
+    font: {
+        src  : 'src/iconfont/**/*.svg',
+        dest : 'dist/iconfont/'
     }
 }
 
@@ -29,6 +33,19 @@ gulp.task('sass', function() {
 	.pipe(sass())//scss转化成css文件
 	.pipe(gulp.dest(paths.css.dest))//写入目标目录
     .pipe(reload({ stream:true })); // 注入刷新页面
+});
+
+//创建图标字体
+gulp.task('iconFont', function() {
+   gulp.src(paths.font.src)
+    .pipe(iconFont({
+      fontName: 'cocofont', // required 
+      appendCodepoints: true, // recommended option
+      prependUnicode: true,
+      formats: ['svg', 'ttf', 'eot', 'woff', 'woff2'],
+      round : 10e0, 
+    }))
+    .pipe(gulp.dest(paths.font.dest));
 });
 
 //自动构建svg雪碧图
@@ -58,7 +75,7 @@ gulp.task('autoSprite',function() {
 });
 
 //同步
-gulp.task('sync', ['autoSprite','sass'], function() {
+gulp.task('sync', ['autoSprite','sass','iconFont'], function() {
     browserSync({
         server: {
             baseDir: './',

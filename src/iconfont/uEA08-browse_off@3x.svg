@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>browse_off@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="-Component-Usage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Components" transform="translate(-1722.000000, -439.000000)" fill="#CBD2DC">
+            <g id="System-Icons" transform="translate(1437.000000, 129.000000)">
+                <g id="Tab-Bar-Icons" transform="translate(50.000000, 303.000000)">
+                    <g id="browse_off" transform="translate(212.000000, 0.000000)">
+                        <path d="M48,7 C34.215,7 23,18.215 23,32 C23,45.785 34.215,57 48,57 C61.785,57 73,45.785 73,32 C73,18.215 61.785,7 48,7 Z M48,55 C35.297,55 25,44.703 25,32 C25,19.297 35.297,9 48,9 C60.703,9 71,19.297 71,32 C71,44.703 60.703,55 48,55 Z M33,47 L50.5,34.5 L63,17 L45.5,29.5 L33,47 Z M49.625,33.625 L38,42 L46.625,30.625 L49.625,33.625 Z"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

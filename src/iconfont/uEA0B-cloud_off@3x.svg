@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="70px" height="44px" viewBox="0 0 70 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>cloud_off@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="-Component-Usage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Components" transform="translate(-2137.000000, -441.000000)" fill="#CBD2DC">
+            <g id="System-Icons" transform="translate(1437.000000, 129.000000)">
+                <g id="Tab-Bar-Icons" transform="translate(50.000000, 303.000000)">
+                    <g id="cloud_off" transform="translate(636.000000, 0.000000)">
+                        <path d="M54.5,9 C46.967,9 40.497,13.51 37.612,19.971 C36.073,18.74 34.124,18 32,18 C27.104,18 23.129,21.912 23.011,26.781 C17.765,28.633 14,33.62 14,39.5 C14,46.956 20.044,53 27.5,53 L71.5,53 C78.404,53 84,47.404 84,40.5 C84,34.095 79.18,28.823 72.97,28.094 C72.976,27.895 73,27.7 73,27.5 C73,17.283 64.717,9 54.5,9 Z M54.5,11 C63.598,11 71,18.402 71,27.5 C71,27.569 70.994,27.637 70.989,27.705 C70.982,27.813 70.975,27.921 70.971,28.03 L70.912,29.866 L72.737,30.08 C78.018,30.7 82,35.179 82,40.5 C82,46.29 77.29,51 71.5,51 L27.5,51 C21.159,51 16,45.841 16,39.5 C16,34.641 19.085,30.288 23.677,28.666 L24.977,28.207 L25.01,26.829 C25.103,23 28.173,20 32,20 C33.6,20 35.109,20.53 36.363,21.533 L38.383,23.148 L39.438,20.786 C42.093,14.841 48.005,11 54.5,11 Z"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>history_off@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="-Component-Usage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Components" transform="translate(-2782.000000, -439.000000)" fill="#CBD2DC">
+            <g id="System-Icons" transform="translate(1437.000000, 129.000000)">
+                <g id="Tab-Bar-Icons" transform="translate(50.000000, 303.000000)">
+                    <g id="history_off" transform="translate(1272.000000, 0.000000)">
+                        <path d="M48,7 C34.193,7 23,18.193 23,32 C23,45.807 34.193,57 48,57 C61.807,57 73,45.807 73,32 C73,18.193 61.807,7 48,7 Z M48,55 C35.297,55 25,44.703 25,32 C25,19.297 35.297,9 48,9 C60.703,9 71,19.297 71,32 C71,44.703 60.703,55 48,55 Z M47,33 L35,33 L35,35 L49,35 L49,15 L47,15 L47,33 Z"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
