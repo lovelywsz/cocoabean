@@ -1,6 +1,6 @@
-$tabbarHeight:           $tabBarHeight !default;
-$tabbarBgColor:          $colorBg !default;
-$tabbarTextColor:        $color0 !default;
+$tabbarHeight:       $tabBarHeight !default;
+$tabbarBgColor:      $colorBarBg !default;
+$tabbarTextColor:    $colorSubText !default;
 
 .tabbar ul{
     @include flexContent(row,nowrap,space-between,center);
@@ -20,13 +20,19 @@ $tabbarTextColor:        $color0 !default;
             width: 100%;
             height: 100%;
             text-align: center;
-            font-size:pxToRem(17px);
-            color:$colorLink; 
+            font-size:pxToRem(10px);
+            color:$colorSubText; 
         }
         .iconFont{
-           font-size:pxToRem(28px); 
+           font-size:pxToRem(18px); 
            margin-bottom:pxToRem(5px);
         }
         span{display:block;}
+    }
+    .cur{
+        a,
+        .iconFont{
+            color:$colorLink;
+        }  
     }
 }

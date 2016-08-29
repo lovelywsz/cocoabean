@@ -1,10 +1,19 @@
 /**
  * panel
  */
+$listGap: pxToRem(20px);
 .normalPanel{
+    padding: $listGap;
     box-shadow: 0 1px 2px -1px rgba(black,0.1);
     @include border(border-bottom,1px,solid,$colorBorder);
     background:$colorBgPanel;
+    h3{
+        font-size: pxToRem(22px);
+        color:$colorText;
+    }
+    .info{
+        margin-top: $gap;
+    }
 }
 // .m-bar-panel{
 //     background-color: $bb-bg;

@@ -1,39 +1,31 @@
 /**
- * button
- */
- $button:"m-btn";
- $f14 : pxToRem(14px);
- $front-icon-font : "m-font" ;
- /*Colors*/
-$cl-a : #333;
-$cl-b : #636363;
-$cl-c : #939393;
-$cl-l : #507DAF;
-$cl-y : #FF8200;
-$cl-r : #e14123;
-$cl-o : #F46200;
-$cl-w : #FFF;
-$cl-g : #10B524;
+* button
+*/
+$btnWidth:   pxToRem(75px)!default;
+$btnHeight:  pxToRem(26px)!default;
+$btnBRadius: pxToRem(3px)!default;
+$button:"btn";
+$btnIcon : "iconFont" ;
 
- [class^="#{$button}"]{
- -webkit-touch-callout: none;
- -webkit-user-select: none;
- }
- .#{$button}{
-    text-align: center;
-    line-height:pxToRem(40px);
-    height: pxToRem(40px);
-    font-size:$f14;
-    border-radius: pxToRem(3px);
-    outline: 0;
-    display: inline-block;
-    min-width: pxToRem(70px);
-    box-sizing:border-box;
-    padding: 0;
-    &.#{$button}-block{
-      width: 100%;
-      display: block;
-    }
+[class^="#{$button}"]{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+.#{$button}{
+  display: inline-block;
+  box-sizing:border-box;
+  padding: 0;
+  min-width: $btnWidth;
+  height: $btnHeight;
+  line-height:$btnHeight;
+  font-size:$font13;
+  border-radius: $btnBRadius;
+  text-align: center;
+  outline: 0;
+  &.#{$button}-block{
+    width: 100%;
+    display: block;
+  }
 }
 .#{$button}-round{
   display: inline-block;
@@ -44,12 +36,12 @@ $cl-g : #10B524;
   font-size: (18/10)*1rem;
   position: relative;
   &:active{
-    .#{$front-icon-font}{
+    .#{$btnIcon}{
       opacity: 0.6;
     }
   }
-  .#{$front-icon-font}{
-    font-size: pxToEm(6px);
+  .#{$btnIcon}{
+    font-size: pxToEm(4px);
     position: absolute;
     top:50%;
     left:50%;
@@ -57,46 +49,24 @@ $cl-g : #10B524;
     color:#fff;
   }
 }
-.#{$button}-large{
-  font-size: (22/10)*1rem;
-}
-.#{$button}-media {
-  font-size: (34/10)*1rem;
-  box-shadow: 0 0 3px 0 rgba(black,.2);
-  .#{$front-icon-font}{
-     font-size: pxToEm(4px);
-  }
-  .#{$front-icon-font}-play{
-    margin-left:pxToEm(2px);
-  }
-  &:active{
-    .#{$front-icon-font}{
-      opacity: 1;
-    }
-  }
-}
-@mixin btn($color,$color-bg,$btn-bd-w,$btn-bd-c,$color-at,$btn-bd-at) {  
+
+@mixin btn($color,$color-bg,$btn-bd-w,$btn-bd-c,$color-at,$color-bg-at,$btn-bd-at) {  
   color: $color;
   background: $color-bg;
   @include border(border,$btn-bd-w,solid,$btn-bd-c);
   &:active{
-        background: $color-at;
+        background: $color-bg-at;
         border-color: $btn-bd-at;
+        color:$color-at;
     }
 }
-/*按钮名称 文字色 背景色 边框大小 边框颜色 激活色 激活边框*/
+/*按钮名称 文字色 背景色 边框大小 边框颜色 激活文字色 激活背景色 激活边框*/
 $btn-types: (
-  (red  #fff  linear-gradient(to bottom, #f73b3b 0%,#f83232 100%) 0 transparent   linear-gradient(to bottom, #d93434 0%,#d92b2b 100%)  transparent)
-  (green  #fff  linear-gradient(to bottom, #18b52a 0%,#10b524 100%)  0 transparent   linear-gradient(to bottom, #149623 0%,#0e961e 100%)  transparent)
-  (orange  #fff  linear-gradient(to bottom, #ff890a 0%,#ff8200 100%)  0 transparent   linear-gradient(to bottom, #e07809 0%,#e07400 100%)  transparent)
-  (blue  #fff  linear-gradient(to bottom, #1a90ff 0%,#108cff 100%)  0 transparent   linear-gradient(to bottom, #167fe0 0%,#0d7ae0 100%) transparent )
-  (white  #787878  linear-gradient(to bottom, #ffffff 0%,#fafafa 100%)  1px #ccc   linear-gradient(to bottom, #e0e0e0 0%,#dbdbdb 100%)  #adadad)
-  (ltgreen #fff #29c944 0 transparent #1f9733 #1f9733)
-  (ltred #fff #ef3f1e 0 transparent #b32f16 #b32f16)
-  (bdgreen #fff #29c944 1px #fff #1f9733 #bfbfbf)
-  (gray #fff #797979 0 transparent #bdbdbd #bdbdbd )
-  (mblack #fff rgba(black,0.3) pxToRem(1px) #fff rgba(black,0.3) #fff )
-  (myellow #fff #faa247 1px #fff #faa247 #fff )
+  (primary #0076FF  transparent  1px #0076FF #fff #0076FF #0076FF)
+  (green  #fff #4cd864  0 transparent  #fff #4cd864  transparent)
+  (blue  #fff #0076FF  0 transparent  #fff #0076FF  transparent)
+  (red  #fff #FE3824  0 transparent  #fff #FE3824  transparent)
+  (gray #fff #ccc  0 transparent  #fff #ccc  transparent)
 ) !default;
 
 @each $btn-type in $btn-types {
@@ -106,9 +76,10 @@ $btn-types: (
   $btn-bd-w: nth($btn-type, 4);
   $btn-bd-c: nth($btn-type, 5);
   $color-at: nth($btn-type, 6);
-  $btn-bd-at: nth($btn-type, 7); 
+  $color-bg-at: nth($btn-type, 7);
+  $btn-bd-at: nth($btn-type, 8); 
   .#{$button}-#{$type} {
-    @include btn($color,$color-bg,$btn-bd-w,$btn-bd-c,$color-at,$btn-bd-at);
+    @include btn($color,$color-bg,$btn-bd-w,$btn-bd-c,$color-at,$color-bg-at,$btn-bd-at);
     &:disabled,
     &.#{$button}-disabled{
       color: rgba($color,.3);
@@ -123,28 +94,21 @@ $btn-types: (
   }
 }
 
+/*Colors*/
+$cl-a : #FE3824;
+$cl-b : #0076FF;
+
 $white-types:(
-  (orange $cl-y)
-  (green $cl-g)
-  (red $cl-r)
-  (blue #108cff)
+  (red $cl-a)
+  (blue $cl-b)
 )!default;
 
 @each $white-type in $white-types {
   $type:  nth($white-type, 1);
   $color: nth($white-type, 2);
-  .#{$button}-white{
+  .#{$button}-primary{
     &.#{$button}-text-#{$type}{
       color: $color;
     }
   }
-}
-
-.#{$button}-bdgreen {
-  .#{$front-icon-font} {
-    font-size: pxToEm(7px)
-  }
-}
-.#{$button}-gray {
-  font-size: (16/10)*1rem;
 }

@@ -1,4 +1,4 @@
-/*字体控制*/
+/*字体----------------------------------------------------- */
 $fontSize:          16px !default;
 @function pxToRem($px) {
   @return $px / $fontSize * 1rem;
@@ -7,26 +7,34 @@ $fontSize:          16px !default;
   @return $px / $fontSize * 1em;
 }
 $fontFamily:        "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif !default;
-
+$font11:            pxToRem(11px);
 $font12:            pxToRem(12px);
 $font13:            pxToRem(13px);
-$font14:            pxToRem(14px);
+$font15:            pxToRem(15px);
+$font16:            pxToRem(16px);
 $font17:            pxToRem(17px);
+$font20:            pxToRem(20px);
+$font22:            pxToRem(22px);
+$font28:            pxToRem(28px);
 
-// 背景色，文本色，边框色，链接色 ----------------------------------------------------- 
-$colorText:          #333 !default;
+//颜色：背景色，文本色，边框色，链接色 ----------------------------------------------------- 
+$colorText:          #030303 !default;
+$colorSubText:       #8F8E94 !default;
 $colorBgPanel:       #fff !default;
-$colorBg:            #fff !default;
+$colorBarBg:         #fff !default;
+$colorBg:            #efeff4 !default;
 $colorBorder:        #dbdbdb !default;
-$baseIconFontColor:   #0076FF !default;
+$baseIconFontColor:  #8F8E94 !default;
 $colorLink:          #0076FF !default;
-$colorPlaceholder:   #999 !default; // input placeholder color
-$colorDisabled:      (text: #999, bg: #e3e3e3, border: #dbdbdb) !default; // textColor bgColor borderColor
-$colorOverlay:        rgba(0,0,0,.7) !default; // 遮罩层颜色
-$color3:              #333;
-$color6:              #666;
-$color9:              #999;
-$color0:              #000;
+$colorPlaceholder:   #c7c7cd !default; // input placeholder color
+$colorDisabled:      #c3c3c4 !default;
+$colorOverlay:       rgba(0,0,0,.7) !default; // 遮罩层颜色
+$colorWarn:          #FE3824;
+$colorWhite:         #fff;
+$color3:             #333;
+$color6:             #666;
+$color9:             #999;
+$color0:             #000;
 
 // 元素上下间距 ----------------------------------------------------- 
 $gap:                 pxToRem(10px) !default;

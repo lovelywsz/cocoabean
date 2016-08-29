@@ -1,9 +1,5 @@
-@import "core/reset"; //normalize
-@import "core/config"; //默认变量
-@import "core/mediaQueries"; //媒体查询
-@import "core/mixin"; //复合样式
-@import "core/iconfont"; //字体图标
+@import "core/global"; //global
 
-@import "components/navigation"; //navigation
-@import "components/list"; //单行列表样式
-@import "components/tabbar"; //单行列表样式
+@import "components/navigation"; //
+@import "components/tabbar"; //
+@import "components/list";

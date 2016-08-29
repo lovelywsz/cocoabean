@@ -4,7 +4,7 @@
  /*Font Name*/
 $fontFamilyName:"cocofont";
 $fontFilePath: "../../../dist/iconfont/cocofont";
-$preIconFont : "iconFont" ;
+$preIconFont : "iconFont";
 
 @font-face {
     font-family: '#{$fontFamilyName}';
@@ -18,22 +18,30 @@ $preIconFont : "iconFont" ;
 .#{$preIconFont}{
     font-family: '#{$fontFamilyName}';
     display:inline-block;
-    color:$baseIconFontColor;
     -webkit-font-smoothing:antialiased;
 }
 
+.#{$preIconFont}Add{
+    &::before{content:"\EA01";}
+}
+.#{$preIconFont}AlubumsOff{
+    &::before{content:"\EA02";}
+}
 .#{$preIconFont}Back{
+    &::before{content:"\EA03";}
+}
+.#{$preIconFont}CloudOff{
+    &::before{content:"\EA04";}
+}
+.#{$preIconFont}Next{
+    &::before{content:"\EA05";}
+}
+.#{$preIconFont}Stop{
     &::before{content:"\EA06";}
 }
-.#{$preIconFont}Search{
-    &::before{content:"\EA1F";}
-}
-.#{$preIconFont}Bookmarks{
+.#{$preIconFont}WorldOff{
     &::before{content:"\EA07";}
 }
-.#{$preIconFont}Organize{
-    &::before{content:"\EA16";}
-}
-.#{$preIconFont}WorldOff{
-    &::before{content:"\EA27";}
+.#{$preIconFont}Check{
+    &::before{content:"\EA08";}
 }

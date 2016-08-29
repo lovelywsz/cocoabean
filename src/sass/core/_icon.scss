@@ -1,5 +1,5 @@
 $svgSpritPath: "../../dist/images/sprite";
-$imageIcon:"m-icon";
+$imageIcon:"iconSvg";
 $spriteWidth:pxToEm(30px);
 $spriteHeight:auto;
 
@@ -13,8 +13,9 @@ $spriteHeight:auto;
     @include svgGet('#{$svgSpritPath}', 'svg', $spriteWidth,$spriteHeight);
     width: pxToEm(10px);
     height: pxToEm(10px);
+    font-size: pxToEm(28px);
 }
-$sprite: yellow bluev;
+$sprite: yellowv bluev;
 @each $icon in $sprite {
     .#{$imageIcon}-#{$icon} {  
         background-position:pxToEm(-10px) pxToEm(-10px)-((index($sprite,$icon)-1)*pxToEm(30px));

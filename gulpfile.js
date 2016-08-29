@@ -1,11 +1,12 @@
 var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    cleancss = require('gulp-clean-css'),//压缩样式
-    autoprefixer = require('gulp-autoprefixer'),//前缀
+    plugins = require('gulp-load-plugins')(),//自动加载插件
     browserSync = require('browser-sync'),//同步
-    reload = browserSync.reload,
-    iconFont = require('gulp-iconfont'),//字体图标
-    svgSprite = require('gulp-svg-sprite');//svg拼图 
+    reload = browserSync.reload;
+    //sass = require('gulp-sass'),
+    //cleancss = require('gulp-clean-css'),//压缩样式
+    //autoprefixer = require('gulp-autoprefixer'),//前缀
+    //iconFont = require('gulp-iconfont'),//字体图标
+    //svgSprite = require('gulp-svg-sprite');//svg拼图 
 
 //定义文件路径
 var paths = {
@@ -30,15 +31,17 @@ var paths = {
 //sass
 gulp.task('sass', function() {
 	return gulp.src(paths.css.src)//读入文件内容
-	.pipe(sass())//scss转化成css文件
-	.pipe(gulp.dest(paths.css.dest))//写入目标目录
+	.pipe(plugins.sass())//scss转化成css文件
+    .pipe(plugins.autoprefixer('last 2 version'))//主流浏览器最近2个版本用“last 2 versions”也可以新增('safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4')；
+	.pipe(plugins.cleanCss())//压缩样式
+    .pipe(gulp.dest(paths.css.dest))//写入目标目录
     .pipe(reload({ stream:true })); // 注入刷新页面
 });
 
 //创建图标字体
 gulp.task('iconFont', function() {
    gulp.src(paths.font.src)
-    .pipe(iconFont({
+    .pipe(plugins.iconfont({
       fontName: 'cocofont', // required 
       appendCodepoints: true, // recommended option
       prependUnicode: true,
@@ -54,8 +57,8 @@ gulp.task('iconFont', function() {
 var config            = {
     shape             : {
         dimension     : {         // Set maximum dimensions 
-            maxWidth  : 32,
-            maxHeight : 32
+            maxWidth  : 30,
+            maxHeight : 30
         },
         spacing       : {         // Add padding 
             padding   : 10
@@ -72,7 +75,7 @@ var config            = {
 };
 gulp.task('autoSprite',function() {
     return gulp.src(paths.svg.src)
-    .pipe(svgSprite(config))
+    .pipe(plugins.svgSprite(config))
     .pipe(gulp.dest(paths.svg.dest))
 });
 
