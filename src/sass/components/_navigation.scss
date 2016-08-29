@@ -1,0 +1,62 @@
+$navigationHeight:           $barHeight !default;
+$navigationBgColor:          $colorBg !default;
+$navigationTextColor:        $color0 !default;
+$navigationSubTitleSwitch:   true !default;
+
+.navigation{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right:0;
+    height: $navigationHeight;
+    background-color: $navigationBgColor;
+    color: $navigationTextColor;
+    z-index: $zIndexHeader;
+    -webkit-backdrop-filter:blur(10px);
+    @include border(border-bottom,1px,solid,$colorBorder);
+
+    .navLeft,
+    .navRight{
+        position: absolute;
+        top:0;
+        line-height: $navigationHeight;
+    }
+    .navLeft a,
+    .navRight a{
+        font-size:pxToRem(17px);
+        color:$colorLink; 
+    }
+    .navLeft .iconFont,
+    .navRight .iconFont{
+        font-size:pxToRem(28px);
+        color:$colorLink;
+    }
+    .navLeft{
+        left:pxToRem(8px);
+    }
+    .navRight{
+        right:pxToRem(8px);
+    }
+    .title{
+        @include flexContent(column,nowrap,center,center);
+        position:absolute;
+        height: $navigationHeight;
+        width:100%;
+        text-align:center;
+    }
+        h2{
+            color: $color0;
+            font-size: $font17;
+            max-width: pxToRem(275px);
+            @extend %textEllipsis;
+        }
+    @if $navigationSubTitleSwitch{
+        h3{
+            flex:none;
+            color: $color6;
+            font-size: $font13;
+            max-width: pxToRem(275px);
+            @extend %textEllipsis;
+        }
+    }
+}

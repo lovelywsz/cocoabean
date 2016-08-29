@@ -44,6 +44,8 @@ gulp.task('iconFont', function() {
       prependUnicode: true,
       formats: ['svg', 'ttf', 'eot', 'woff', 'woff2'],
       round : 10e0, 
+      normalize: true,
+      fontHeight: 1001
     }))
     .pipe(gulp.dest(paths.font.dest));
 });

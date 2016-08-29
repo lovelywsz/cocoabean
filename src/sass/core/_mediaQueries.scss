@@ -1,14 +1,9 @@
 /*媒体查询各个设备比例值*/
-$iP6   : 1.06;
-$iPlus : 1.15;
-$iPad  : 1.25;
+$iPlus : 1.06;
+$iPad : 1.25;
 
 @mixin device($value){
-  @if $value == iP6 {
-    @media screen and (min-width: 375px) and (max-width: 413px){ 
-        @content; 
-    }
-  }@else if $value == iPlus {
+  @if $value == iPlus {
     @media screen and (min-width: 414px) and (max-width: 767px){ 
         @content; 
     }

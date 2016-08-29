@@ -8,6 +8,37 @@
        #{$bdv}: $w/2.8 $s $c;
   }
 }
+//flex
+@mixin flexContent($direction:row,$wrap:nowrap,$justifyContent:flex-start,$alignItems: stretch){
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  /*主轴方向*/
+  flex-direction: $direction;
+  /*换行*/
+  flex-wrap: $wrap;
+  /*flex-flow属性是flex-direction和flex-wrap的简写形式，默认值为row nowrap*/
+  
+  /*项目在主轴上的对齐方式*/
+  -webkit-justify-content: $justifyContent;
+  justify-content: $justifyContent;
+  /*项目在交叉轴上如何对齐*/
+  -webkit-align-items: $alignItems;
+  align-items: $alignItems;
+}
+@mixin flexItem{
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  width: 0%;
+}
+
+//textEllipsis
+%textEllipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 //Absolute Position
 @mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
@@ -20,21 +51,6 @@
 
 .abs {
   @include abs-pos(10px, 10px, 5px, 15px);
-}
-
-// rem 单位
-@function calculateRem($size: 16) {
-  $remSize: $size / 16px;
-  @return $remSize * 1rem;
-}
-
-@mixin font-size($size) {
-  font-size: $size;
-  font-size: calculateRem($size);
-}
-
-p {
-  @include font-size(14px)
 }
 
 //Clearfix

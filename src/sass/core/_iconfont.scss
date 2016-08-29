@@ -2,31 +2,38 @@
  * icon font
  */
  /*Font Name*/
-$font-family-name:"cocofont";
-/*Font Path*/
-$font-file-path: "../../../dist/iconfont/cocofont";
-/*Font Class Prefix*/
-$front-icon-font : "m-font" ;
+$fontFamilyName:"cocofont";
+$fontFilePath: "../../../dist/iconfont/cocofont";
+$preIconFont : "iconFont" ;
 
 @font-face {
-    font-family: '#{$font-family-name}';
-    src: url('#{$font-file-path}.woff2') format('woff2'),
-         url('#{$font-file-path}.woff') format('woff'),
-         url('#{$font-file-path}.svg') format('svg'),
-         url('#{$font-file-path}.ttf') format('truetype');
+    font-family: '#{$fontFamilyName}';
+    src: url('#{$fontFilePath}.woff2') format('woff2'),
+         url('#{$fontFilePath}.woff') format('woff'),
+         url('#{$fontFilePath}.svg') format('svg'),
+         url('#{$fontFilePath}.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-.#{$front-icon-font}{
-    font-family: '#{$font-family-name}';
+.#{$preIconFont}{
+    font-family: '#{$fontFamilyName}';
     display:inline-block;
-    //color:$baseFontIconColor;
+    color:$baseIconFontColor;
     -webkit-font-smoothing:antialiased;
 }
-/*arrow right chart 1*/
-.#{$front-icon-font}action{
-    &::before{content:"\EA01";}
-}
-.#{$front-icon-font}add{
+
+.#{$preIconFont}Back{
     &::before{content:"\EA06";}
+}
+.#{$preIconFont}Search{
+    &::before{content:"\EA1F";}
+}
+.#{$preIconFont}Bookmarks{
+    &::before{content:"\EA07";}
+}
+.#{$preIconFont}Organize{
+    &::before{content:"\EA16";}
+}
+.#{$preIconFont}WorldOff{
+    &::before{content:"\EA27";}
 }
