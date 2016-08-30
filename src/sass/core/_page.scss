@@ -1,0 +1,20 @@
+$dotWidth: pxToRem(8px);
+$dotHeight: pxToRem(8px);
+$dotBgColor: rgba(255,255,255,0.6);
+$dotCurBgColor: rgba(255,255,255,1);
+$dotGap: pxToRem(4px);
+
+.dotPage {
+    li{
+        display: inline-block;
+        width: $dotWidth;
+        height: $dotHeight;
+        border-radius: 50%;
+        background: $dotBgColor;
+        box-shadow: 0 0 1px rgba(0,0,0,0.1);
+        margin-right:$dotGap;
+        &.cur{
+            background: $dotCurBgColor;
+        }
+    }
+}
