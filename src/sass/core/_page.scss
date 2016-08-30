@@ -9,10 +9,12 @@ $dotGap: pxToRem(4px);
         display: inline-block;
         width: $dotWidth;
         height: $dotHeight;
+        line-height: $dotHeight;
         border-radius: 50%;
         background: $dotBgColor;
         box-shadow: 0 0 1px rgba(0,0,0,0.1);
-        margin-right:$dotGap;
+        margin:0 $dotGap;
+        text-indent: -99999px;
         &.cur{
             background: $dotCurBgColor;
         }

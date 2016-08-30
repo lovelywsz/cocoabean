@@ -1,0 +1,23 @@
+/**
+* bubble
+*/
+$badgeWidth:   pxToRem(5px)!default;
+$badgeHeight:  pxToRem(16px)!default;
+$badgeGap:     0 pxToRem(5px)!default;
+$badgeBgColor:     #FE3824 !default;
+$badgeTextColor:   #fff!default;
+$badgeFontSize:   pxToRem(10px)!default;
+$badgeRadius:   pxToRem(10px)!default;
+
+.badge{
+    display: inline-block;
+    vertical-align: middle;
+    padding: $badgeGap;
+    height: $badgeHeight;
+    line-height: $badgeHeight;
+    border-radius: $badgeRadius;
+    background: $badgeBgColor;
+    color: $badgeTextColor;
+    font-size: $badgeFontSize;
+    text-align: center;
+}

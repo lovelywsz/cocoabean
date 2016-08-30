@@ -13,7 +13,7 @@
             <h2>COCOABEAN MOBILE UI KIT</h2>
         </div>
     </header>
-    <main style="padding-top:44px;">
+    <main style="padding:44px 0 49px">
         <article class="normalPanel">
              <header>
                 <h3>字体图标</h3>
@@ -45,6 +45,7 @@
             <div class="info">
                 <a href="javascript:;"  class="btn btn-primary">默认按钮</a>
                 <a href="javascript:;"  class="btn btn-primary btn-disabled">不可点击</a>
+                <button class="btn btn-primary" ontouchstart="">button</button>
                 <a href="javascript:;"  class="btn btn-block btn-primary btn-text-blue">蓝字</a>
                 <a href="javascript:;"  class="btn btn-block btn-primary btn-text-red">红字</a>
                 <span class="btn-round btn-green">
@@ -63,15 +64,49 @@
         </article>
         <article class="normalPanel">
              <header>
+                <h3>badge</h3>
+            </header>
+            <div class="info">
+                <span class="badge">1</span>
+                <span class="badge">99+</span>
+                <span class="badge">NEW</span>
+            </div>
+        </article>
+        <article class="normalPanel">
+             <header>
+                <h3>表单元素</h3>
+            </header>
+            <div class="info">
+                <label class="iconSwitch">            
+                    <input type="checkbox" checked="">
+                    <span></span>               
+                </label>
+                <label class="iconCheckbox">
+                    <input type="checkbox" checked="">
+                    <span><i class="iconFont iconFontCheck"></i></span>
+                </label>
+                <label class="iconRadio">
+                    <input type="radio" checked="" name="a">
+                    <span></span>
+                </label>
+                <label class="iconRadio">
+                    <input type="radio" checked="" name="a">
+                    <span></span>
+                </label>
+            </div>
+        </article>
+        <article class="normalPanel">
+             <header>
                 <h3>分页提示</h3>
             </header>
             <div class="info">
-                <ul class="dotPage" style="background-color:#333;display:inline-block">
-                    <li class="cur"></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                <ul class="dotPage" style="background-color:#666;display:inline-block">
+                    <li class="cur">page1</li>
+                    <li>page2</li>
+                    <li>page3</li>
+                    <li>page4</li>
+                    <li>page5</li>
+                    <li>page6</li>
                 </ul>
             </div>
         </article>

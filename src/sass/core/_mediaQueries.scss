@@ -13,11 +13,7 @@ $iPad : 1.25;
     }
   }
 }
-@include device(iP6){
-    html{
-        font-size: $iPlus*$fontSize;
-    }
-}
+
 @include device(iPlus){
     html{
         font-size: $iPlus*$fontSize;

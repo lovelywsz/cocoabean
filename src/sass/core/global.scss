@@ -6,4 +6,7 @@
 @import "icon"; //SVG图标
 @import "button";//按钮
 
-body {background-color:$colorBg}
+html{
+    background:$colorBg;
+    font-size:$fontSize;
+}

@@ -1,0 +1,146 @@
+/**
+ * form
+ */
+$switchWidth: pxToEm(51px);
+$switchHeight: pxToEm(31px);
+$switchDotWidth: pxToEm(28px);
+$switchDotHeight: pxToEm(28px);
+$switchRadius: pxToEm(16px);
+$switchLeftGap: pxToEm(22px);
+$switchBgColor: #44db5e;
+
+$checkboxWidth: pxToEm(18px);
+$checkboxHeight: pxToEm(18px);
+$checkboxFont: pxToRem(16px);
+$checkboxBdColor: #44db5e;
+$checkboxIconColor: #44db5e;
+$checkboxIconFont: pxToEm(8px);
+
+$radioWidth: pxToEm(20px);
+$radioHeight: pxToEm(20px);
+$radioDotColor: #44db5e;
+$radioDotWidth: pxToEm(12px);
+$radioDotHeight: pxToEm(12px);
+
+.iconSwitch{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    span {
+        position: relative;
+        display: inline-block;
+        box-sizing:border-box;
+        vertical-align: middle;
+        width: $switchWidth;
+        height: $switchHeight;
+        background: #fff;
+        box-shadow:inset 0 0 0 pxToEm(1.5px) #ebebeb;
+        border-radius: $switchRadius;
+        transition: all 0.3s cubic-bezier(.17,.67,.43,.98);
+        &:after{
+            position: absolute;
+            content: '';
+            width: $switchDotWidth;
+            height: $switchDotHeight;
+            border-radius: 50%;
+            top:0;
+            left: 0;
+            background: #fff;
+            box-shadow: inset 0 0  pxToEm(2px) pxToEm(-1px) rgba(0,0,0,0.8),
+                        0 pxToEm(1px) pxToEm(1px) pxToEm(.5px) rgba(0,0,0,0.1),
+                        0 pxToEm(3px) pxToEm(1px) pxToEm(.5px) rgba(0,0,0,0.15),
+                        0 pxToEm(5px) pxToEm(5px) 0 rgba(0,0,0,0.1);
+            transition: all 0.2s linear;
+        }
+    }
+    input[type="checkbox"]{
+        opacity: 0;
+        position: absolute;
+        &:checked{
+            + span {
+                box-shadow: inset 0 0 0 pxToEm(20px) $switchBgColor;
+                &:after{
+                    left:$switchLeftGap;
+                }
+            }
+        }
+    }
+}
+.iconCheckbox {
+    display: inline-block;
+    font-size: $checkboxFont;
+    position: relative;
+    span{
+        position:relative;
+        box-sizing:border-box;
+        display: inline-block;
+        @include border(border,1px,solid,$checkboxBdColor);
+        background: #fff;
+        width: $checkboxWidth;
+        height: $checkboxHeight;
+        line-height: $checkboxHeight;
+        margin: 0;
+        text-align:center;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+    input[type="checkbox"]{
+        opacity: 0;
+        position: absolute;
+        &:checked{
+            + span{
+                .#{$preIconFont}{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .#{$preIconFont}{
+        display: none;
+        font-size: $checkboxIconFont;
+        color: $checkboxIconColor;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+.iconRadio{
+    display: inline-block;
+    position: relative;
+    input[type="radio"]{
+        opacity: 0;
+        position: absolute;
+        &:checked{
+            +span{
+                &:after{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    span{
+        position: relative;
+        box-sizing:border-box;
+        display: inline-block;
+        vertical-align: middle;
+        width: $radioWidth;
+        height: $radioHeight;
+        @include border(border,1px,solid,#ccc);
+        background: #fff;
+        border-radius: 50%;
+        &:after{
+            content: "";
+            display: none;
+            border-radius: 50%;
+            background: $radioDotColor;
+            position: absolute;
+            width: $radioDotWidth;
+            height: $radioDotHeight;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}
