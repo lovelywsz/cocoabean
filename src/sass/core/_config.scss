@@ -7,8 +7,9 @@ $fontSize:          16px !default;
   @return $px / $fontSize * 1em;
 }
 
+$fontFilePath:      "https://lovelywsz.github.io/cocoabean/dist/iconfont/cocofont";
 $preIconFont:       "iconFont";
-$button:"btn";
+$button:             "btn";
 
 $fontFamily:        "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif !default;
 $font11:            pxToRem(11px);
