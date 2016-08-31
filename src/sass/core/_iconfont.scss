@@ -4,7 +4,7 @@
  /*Font Name*/
 $fontFamilyName:"cocofont";
 $fontFilePath: "../../../dist/iconfont/cocofont";
-$preIconFont : "iconFont";
+$preIconFont : $preIconFont;
 
 @font-face {
     font-family: '#{$fontFamilyName}';
@@ -44,4 +44,7 @@ $preIconFont : "iconFont";
 }
 .#{$preIconFont}Check{
     &::before{content:"\EA08";}
+}
+.#{$preIconFont}Search{
+    &::before{content:"\EA09";}
 }

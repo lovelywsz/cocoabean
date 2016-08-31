@@ -22,16 +22,20 @@ $radioDotColor: #44db5e;
 $radioDotWidth: pxToEm(12px);
 $radioDotHeight: pxToEm(12px);
 
-$searchBtnColor: $colorLink;
-$searchInputWidth: pxToRem(359px);
-$searchInputHeight: pxToRem(30px);
+$searchInputWidth: pxToRem(356px);
+$searchInputHeight: pxToRem(29px);
 $searchInputGap: pxToRem(8px);
-$searchInputBgColor: rgba(0,0,0,0.8);
+$searchInputBgColor: rgba(0,0,0,0.3);
 $searchInputRadius: pxToRem(6px);
+$searchInputTextColor: #fff;
+$searchInputTextGap: pxToRem(20px);
+$searchActionColor: $colorLink;
 $searchActionWidth: pxToRem(53px);
 $searchActionHeight: pxToRem(22px);
 $searchActionGap: pxToRem(10px);
-
+$searchIconGap: pxToRem(8px);
+$searchIconClor : #fff;
+$searchHolderTextColor: #fff;
 
 .iconSwitch{
     display: inline-block;
@@ -157,26 +161,33 @@ $searchActionGap: pxToRem(10px);
 }
 
 .searchBar{
+    position: relative;
     @include flexContent(row,nowrap,space-between,center);
-    .inputWrap{
+    .#{$preIconFont}{
+        display: none;
+        position: absolute;
+        top:50%;
+        -webkit-transform:translateY(-50%);
+        left: $searchIconGap;
+        color: $searchIconClor;
+        font-size: $font13;
+    }
+    input[type="search"]{
         @include flexItem;
-        input[type="search"]{
-            width: $searchInputWidth;
-            height: $searchInputHeight;
-            padding: $searchInputGap;
-            border: none;
-            border-radius: $searchInputRadius;
-            background: $searchInputBgColor;
-            font-size: $font14;
-            text-align:center;
-            &:checked{
-                width:295px;
-                text-color:#f00;
-                + .actionBtn{
-                    display:block;    
-                }
-            }
-        }
+        width: $searchInputWidth;
+        height: $searchInputHeight;
+        line-height: $searchInputHeight;
+        padding: $searchInputGap;
+        border: none;
+        border-radius: $searchInputRadius;
+        background: $searchInputBgColor;
+        font-size: $font14;
+        text-align:center;
+        color: $searchInputTextColor;
+    }
+    input[type="search"]::-webkit-input-placeholder{ 
+        font-family: '#{$fontFamilyName}';
+        color:$searchHolderTextColor;
     }
     .actionBtn{
         flex:none;
@@ -185,6 +196,84 @@ $searchActionGap: pxToRem(10px);
         width: $searchActionWidth;
         height: $searchActionHeight;
         line-height: $searchActionHeight;
-        color: $searchBtnColor; 
+        color: $searchActionColor; 
+    }
+    &.active{
+        .#{$preIconFont},
+        .actionBtn{
+            display: block;
+        }
+        input[type="search"]{
+            text-align: left;
+            text-indent: $searchInputTextGap;   
+        }
+        input[type="search"]::-webkit-input-placeholder{
+            opacity: 0; 
+        }
+    }
+}
+
+.textareaView{
+    position: relative;
+    color: $colorPlaceholder;
+    textarea{
+        width: 100%;
+        padding: pxToRem(10px);
+        font-size: $font13;
+        @include border(border,1px,solid,$colorBorder);
+        -webkit-appearance:none;
+        resize: none;
+        border-radius: pxToRem(3px);
+        outline: none;
+        min-height: pxToRem(70px);
+        box-shadow:inset 0 1px 2px -1px rgba(black,.25) ;
+    }
+    .tips{
+        position: absolute;
+        bottom: pxToRem(7px);
+        right: pxToRem(10px);
+        font-size: $font11;
+        .#{$button}-round{
+            vertical-align: middle;
+            font-size: (8/16)*1rem;
+        }
+    }
+}
+.formList{
+    box-shadow: 0 1px 2px -1px rgba(black,0.1);
+    width: 100%;
+    .item{
+        @include flexContent(row,nowrap,center,center);
+        @include border(border-top,1px,solid,$colorBorder);
+        font-size: $font17;
+        color:$colorText;
+        height: pxToRem(46px);
+        line-height: pxToRem(46px);
+        box-sizing:border-box;
+        .title{
+            width: pxToRem(80px);
+            text-align: right;
+            span{
+                color: $colorWarn;
+                vertical-align: middle;
+            }
+        }
+        .value{
+            @include flexItem;
+            input{
+                width:100%;
+                padding-left:pxToRem(8px);
+                font-size: $font17;
+                border:none;
+            }
+        }
+        .tips{
+            flex:none;
+            color:$colorSubText;
+            font-size: $font17;
+            .#{$preIconFont}{
+                font-size: 0.9rem;
+            }
+        }
     }
 }

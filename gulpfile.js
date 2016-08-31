@@ -33,7 +33,7 @@ gulp.task('sass', function() {
 	return gulp.src(paths.css.src)//读入文件内容
 	.pipe(plugins.sass())//scss转化成css文件
     .pipe(plugins.autoprefixer('last 2 version'))//主流浏览器最近2个版本用“last 2 versions”也可以新增('safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4')；
-	.pipe(plugins.cleanCss())//压缩样式
+	//.pipe(plugins.cleanCss())//压缩样式
     .pipe(gulp.dest(paths.css.dest))//写入目标目录
     .pipe(reload({ stream:true })); // 注入刷新页面
 });

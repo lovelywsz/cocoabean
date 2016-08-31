@@ -7,6 +7,9 @@ $fontSize:          16px !default;
   @return $px / $fontSize * 1em;
 }
 
+$preIconFont:       "iconFont";
+$button:"btn";
+
 $fontFamily:        "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif !default;
 $font11:            pxToRem(11px);
 $font12:            pxToRem(12px);
@@ -52,3 +55,4 @@ $zIndexHeader:        1000 !default;
 $zIndexFooter:        1000 !default;
 $zIndexPopup:         2000 !default;                     
 $zIndexOverlay:       3000 !default; // 默认高于header和footer部分
+$zIndexContent:       4000 !default; 

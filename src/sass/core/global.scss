@@ -2,9 +2,6 @@
 @import "config"; //默认变量
 @import "mediaQueries"; //媒体查询
 @import "mixin"; //复合样式
-@import "iconfont"; //字体图标
-@import "icon"; //SVG图标
-@import "button";//按钮
 
 html{
     background:$colorBg;

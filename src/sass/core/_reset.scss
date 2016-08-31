@@ -66,3 +66,15 @@ a,img,label {
 input:focus{
     outline:none;
 }
+input,
+input[type="checkbox"],
+input[type="radio"],
+input[type="search"],
+textarea {
+  box-sizing: border-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}

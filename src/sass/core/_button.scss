@@ -4,10 +4,10 @@
 $btnWidth:   pxToRem(75px)!default;
 $btnHeight:  pxToRem(26px)!default;
 $btnBRadius: pxToRem(3px)!default;
-$button:"btn";
+$button: $button;
 $btnIcon : "iconFont" ;
-$btnRoundWidth:   pxToRem(22px)!default;
-$btnRoundHeight:  pxToRem(22px)!default;
+$btnRoundWidth:   pxToEm(22px)!default;
+$btnRoundHeight:  pxToEm(22px)!default;
 $btnRoundFont:    pxToRem(16px)!default;
 $btnRoundIconFont:pxToEm(8px)!default;
 

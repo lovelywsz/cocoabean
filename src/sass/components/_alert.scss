@@ -1,0 +1,76 @@
+.alertWrap{
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: $zIndexOverlay;
+    -webkit-backdrop-filter:blur(10px);
+    .overlay{
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: $zIndexOverlay;
+        background:$colorOverlay;
+    }
+    .alert{
+        width: pxToRem(268px);
+        position: relative;
+        background: #fff;
+        border-radius: 13px;
+        overflow: hidden;
+        z-index: $zIndexContent;
+        .content{
+            padding:pxToRem(19px) pxToRem(16px);
+            text-align: center;
+            @include border(border-bottom,1px,solid,$colorBorder);
+            h3{
+                font-size: $font17;
+                color: $colorText;
+            }
+            p{
+                margin-top:pxToRem(6px);
+                font-size: $font13;
+                color: $colorText;
+            }
+        }
+        .btnGroup{
+            @include flexContent(row,nowrap,space-between,center);
+            li{
+                @include border(border-right,1px,solid,$colorBorder);
+                @include flexItem;
+                height: pxToRem(44px);
+                line-height: pxToRem(44px);
+                &:last-child{
+                    border: none;
+                }
+                a{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    font-size: $font17;
+                    color: $colorSubText; 
+                }
+            }
+            .cur{
+                a{
+                    color: $colorLink;
+                }  
+            }
+            &.multipleBtns{
+                flex-direction: column;
+                li{
+                    width: 100%;
+                    @include border(border-bottom,1px,solid,$colorBorder);
+                }
+            }
+        }
+    }
+    &.active{
+       @include flexContent(column,nowrap,center,center);
+    }
+}

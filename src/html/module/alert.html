@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alert</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script src="../../js/device.js"></script>
+    <script src="../../js/jquery-2.2.3.min.js"></script>
+    <script src="../../js/index.js"></script>
+    <link rel="stylesheet" href="../../../dist/css/module/alert.css">
+</head>
+<body>
+<header class="navigation">
+    <div class="navLeft">
+        <span class="iconFont iconFontBack"></span>
+    </div>
+    <div class="title">
+        <h2>title</h2>
+    </div>
+</header>
+<main style="margin-top:60px;">
+    <p class="alertBtn"><a href="#">确定提示层</a></p>
+    <p class="alertBtn"><a href="#">确定取消提示层</a></p>
+    <p class="alertBtn"><a href="#">多个操作提示层</a></p>
+</main>
+<section class="alertWrap">
+    <div class="overlay"></div>
+    <div class="alert">
+        <main class="content">
+            <header>
+                <h2>标题</h2>
+            </header>
+            <p>内容详情提示语</p>
+        </main>
+        <footer>
+            <ul class="btnGroup">
+                <li class="cur">
+                    <a href="javascript:void(0)">确定</a>
+                </li>
+            </ul> 
+        </footer>
+    </div>
+</section>
+<section class="alertWrap">
+    <div class="overlay"></div>
+    <div class="alert">
+        <main class="content">
+            <header>
+                <h2>标题</h2>
+            </header>
+            <p>内容详情提示语</p>
+        </main>
+        <footer>
+            <ul class="btnGroup">
+                <li class="cur">
+                    <a href="javascript:void(0)">取消</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">确定</a>
+                </li>
+            </ul> 
+        </footer>
+    </div>
+</section>
+<section class="alertWrap">
+    <div class="overlay"></div>
+    <div class="alert">
+        <main class="content">
+            <header>
+                <h2>标题</h2>
+            </header>
+            <p>内容详情提示语</p>
+        </main>
+        <footer>
+            <ul class="btnGroup multipleBtns">
+                <li class="cur">
+                    <a href="javascript:void(0)">取消</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">更多</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">确定</a>
+                </li>
+            </ul> 
+        </footer>
+    </div>
+</section>
+</body>
+</html>
