@@ -120,7 +120,7 @@ input[type="search"]::-webkit-search-decoration {
 /*Font Name*/
 @font-face {
   font-family: "cocofont";
-  src: url("../../../dist/iconfont/cocofont.woff2") format("woff2"), url("../../../dist/iconfont/cocofont.woff") format("woff"), url("../../../dist/iconfont/cocofont.svg") format("svg"), url("../../../dist/iconfont/cocofont.ttf") format("truetype");
+  src: url("https://lovelywsz.github.io/cocoabean/dist/iconfont/cocofont.woff2") format("woff2"), url("https://lovelywsz.github.io/cocoabean/dist/iconfont/cocofont.woff") format("woff"), url("https://lovelywsz.github.io/cocoabean/dist/iconfont/cocofont.svg") format("svg"), url("https://lovelywsz.github.io/cocoabean/dist/iconfont/cocofont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
