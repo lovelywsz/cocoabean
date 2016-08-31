@@ -41,12 +41,14 @@ $color6:             #666;
 $color9:             #999;
 $color0:             #000;
 
-// 元素上下间距 ----------------------------------------------------- 
-$gap:                 pxToRem(10px) !default;
-
 // header,footer等的高度 ----------------------------------------------------- 
 $barHeight:           pxToRem(44px) !default;
 $tabBarHeight:        pxToRem(49px) !default;
+
+// 元素上下间距 ----------------------------------------------------- 
+$gap:                 pxToRem(10px) !default;
+$mainGap:             $barHeight    !default;
+
 // radius ----------------------------------------------------- 
 $radiusBase:          pxToRem(5px) !default;
  

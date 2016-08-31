@@ -23,7 +23,7 @@ $tabbarTextColor:    $colorSubText !default;
             font-size:pxToRem(10px);
             color:$colorSubText; 
         }
-        .iconFont{
+        .#{$preIconFont}{
            font-size:pxToRem(18px); 
            margin-bottom:pxToRem(5px);
         }
@@ -31,7 +31,7 @@ $tabbarTextColor:    $colorSubText !default;
     }
     .cur{
         a,
-        .iconFont{
+        .#{$preIconFont}{
             color:$colorLink;
         }  
     }

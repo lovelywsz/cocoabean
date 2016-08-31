@@ -118,13 +118,16 @@ html {
   background: #efeff4;
   font-size: 16px; }
 
+.mainWrap {
+  margin-top: 2.75rem; }
+
 /**
  * icon font
  */
 /*Font Name*/
 @font-face {
   font-family: "cocofont";
-  src: url("../../dist/iconfont/cocofont.woff2") format("woff2"), url("../../dist/iconfont/cocofont.woff") format("woff"), url("../../dist/iconfont/cocofont.svg") format("svg"), url("../../dist/iconfont/cocofont.ttf") format("truetype");
+  src: url("../../../dist/iconfont/cocofont.woff2") format("woff2"), url("../../../dist/iconfont/cocofont.woff") format("woff"), url("../../../dist/iconfont/cocofont.svg") format("svg"), url("../../../dist/iconfont/cocofont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -163,7 +166,7 @@ html {
 .iconSvg {
   display: inline-block;
   vertical-align: top;
-  background-image: url("../../dist/images/sprite.svg");
+  background-image: url("../../../dist/images/sprite.svg");
   background-size: 1.875em auto;
   width: 0.625em;
   height: 0.625em;
@@ -720,54 +723,56 @@ html {
   .normalPanel .info {
     margin-top: 0.625rem; }
 
-/**
- * list
- */
-.flex-cont, .list {
-  /*定义为flexbox的"父元素"*/
-  display: -ms-flexbox;
-  display: flex; }
-
-.flex-item, .list .item {
-  /*给"子元素"赋予自由伸缩的能力*/
-  -ms-flex: 1;
-      flex: 1;
-  width: 0%; }
-
-/*列表*/
-.flex-simple, .list {
-  /*定义子元素垂直居中*/
-  -ms-flex-align: center;
-      -ms-grid-row-align: center;
-      align-items: center;
-  padding: 10px 15px; }
-
-.list .item {
-  background-color: #fff;
+.baseList {
+  box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #dbdbdb; }
-  .iosx2 .list .item {
+  .iosx2 .baseList {
     border-bottom: 0.5px solid #dbdbdb; }
-  .iosx3 .list .item {
+  .iosx3 .baseList {
     border-bottom: 0.35714px solid #dbdbdb; }
-
-.list li:last {
-  border: none; }
-
-.list .actionIcon {
-  width: 50px;
-  height: 25px;
-  text-align: center;
-  background: #31BBEE;
-  margin: 10px;
-  line-height: 25px;
-  color: #fff;
-  /*子元素默认是可以伸缩的，需要写flex:none来禁止伸缩;
-    */
-  -ms-flex: none;
-      flex: none; }
-
-.s-img {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
-  background: #31BBEE; }
+  .baseList h2 {
+    padding-left: 0.9375rem;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    font-size: 1rem;
+    color: #030303; }
+  .baseList ul {
+    background: #fff; }
+    .baseList ul li {
+      display: -ms-flexbox;
+      display: flex;
+      /*主轴方向*/
+      -ms-flex-direction: row;
+          flex-direction: row;
+      /*换行*/
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+      /*flex-flow属性是flex-direction和flex-wrap的简写形式，默认值为row nowrap*/
+      /*项目在主轴上的对齐方式*/
+      -ms-flex-pack: center;
+          justify-content: center;
+      /*项目在交叉轴上如何对齐*/
+      -ms-flex-align: center;
+          align-items: center;
+      padding: 0 0.9375rem;
+      height: 2.8125rem;
+      line-height: 2.8125rem;
+      border-bottom: 1px solid #dbdbdb; }
+      .iosx2 .baseList ul li {
+        border-bottom: 0.5px solid #dbdbdb; }
+      .iosx3 .baseList ul li {
+        border-bottom: 0.35714px solid #dbdbdb; }
+      .baseList ul li:last-child {
+        border: none; }
+      .baseList ul li .item {
+        -ms-flex: 1;
+            flex: 1;
+        width: 0%; }
+      .baseList ul li .iconFont {
+        -ms-flex: none;
+            flex: none;
+        color: #8F8E94;
+        font-size: 1rem; }
+      .baseList ul li a {
+        display: block;
+        color: #030303; }

@@ -2,6 +2,7 @@
  * panel
  */
 $listGap: pxToRem(20px);
+
 .normalPanel{
     padding: $listGap;
     box-shadow: 0 1px 2px -1px rgba(black,0.1);
@@ -15,74 +16,40 @@ $listGap: pxToRem(20px);
         margin-top: $gap;
     }
 }
-// .m-bar-panel{
-//     background-color: $bb-bg;
-//     box-shadow: inset 0 1px 0 0 #fff,0 -2px 2px -1px rgba(black,0.15);
-// }
-// .m-line-panel{
-//     background-color: $lb-bg ;
-//     @include border(border-top,1px,solid,$colorBorder);
-// }
-// .m-panel-nobd{
-//     border:none!important;
-//     box-shadow: none!important;
-// }
 
-/**
- * list
- */
- .flex-cont{
-    /*定义为flexbox的"父元素"*/
-    display: -webkit-box; 
-    display: -webkit-flex;
-    display: flex;
-}
-.flex-item{
-    /*给"子元素"赋予自由伸缩的能力*/
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
-    width: 0%;
-}
-
-/*列表*/
-.flex-simple {
-    /*定义子元素垂直居中*/
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    padding: 10px 15px;
-}
-
-.list{
-    @extend .flex-cont;
-    @extend .flex-simple;
-}
-
-.list .item{
-    @extend .flex-item;
-    background-color: #fff;
+.baseList{
+    box-shadow: 0 1px 2px -1px rgba(black,0.1);
     @include border(border-bottom,1px,solid,$colorBorder);
-}
-.list li:last{border:none;}
-
-.list  .actionIcon{
-    width: 50px;
-    height:25px;
-    text-align: center;
-    background: #31BBEE;
-    margin: 10px;
-    line-height: 25px;
-    color: #fff;
-    /*子元素默认是可以伸缩的，需要写flex:none来禁止伸缩;
-    */flex:none;
-}
-
-
-
-.s-img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    background: #31BBEE;
+    h2{
+        padding-left: pxToRem(15px);
+        height: pxToRem(28px);
+        line-height: pxToRem(28px);
+        font-size: $font16;
+        color: $colorText;
+    }
+    ul{
+        background:$colorBgPanel;
+        li{
+            @include flexContent(row,nowrap,center,center);
+            padding: 0 pxToRem(15px);
+            height: pxToRem(45px);
+            line-height: pxToRem(45px);
+            @include border(border-bottom,1px,solid,$colorBorder);
+            &:last-child{
+                border:none;
+            }
+            .item{
+                @include flexItem;
+            }
+            .#{$preIconFont}{
+                flex:none;
+                color: $colorSubText;
+                font-size:pxToRem(16px);
+            }
+            a{
+                display:block;
+                color: $colorText;
+            }
+        }
+    } 
 }
