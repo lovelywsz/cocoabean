@@ -84,7 +84,7 @@ gulp.task('sync', ['autoSprite','sass','iconFont'], function() {
     browserSync({
         server: {
             baseDir: './',
-            index: "src/html/index.html"
+            //index: "src/html/index.html"
         }
     });
     gulp.watch(paths.css.src, ['sass']);
