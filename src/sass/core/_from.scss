@@ -22,6 +22,17 @@ $radioDotColor: #44db5e;
 $radioDotWidth: pxToEm(12px);
 $radioDotHeight: pxToEm(12px);
 
+$searchBtnColor: $colorLink;
+$searchInputWidth: pxToRem(359px);
+$searchInputHeight: pxToRem(30px);
+$searchInputGap: pxToRem(8px);
+$searchInputBgColor: rgba(0,0,0,0.8);
+$searchInputRadius: pxToRem(6px);
+$searchActionWidth: pxToRem(53px);
+$searchActionHeight: pxToRem(22px);
+$searchActionGap: pxToRem(10px);
+
+
 .iconSwitch{
     display: inline-block;
     position: relative;
@@ -142,5 +153,38 @@ $radioDotHeight: pxToEm(12px);
             left: 50%;
             transform: translate(-50%,-50%);
         }
+    }
+}
+
+.searchBar{
+    @include flexContent(row,nowrap,space-between,center);
+    .inputWrap{
+        @include flexItem;
+        input[type="search"]{
+            width: $searchInputWidth;
+            height: $searchInputHeight;
+            padding: $searchInputGap;
+            border: none;
+            border-radius: $searchInputRadius;
+            background: $searchInputBgColor;
+            font-size: $font14;
+            text-align:center;
+            &:checked{
+                width:295px;
+                text-color:#f00;
+                + .actionBtn{
+                    display:block;    
+                }
+            }
+        }
+    }
+    .actionBtn{
+        flex:none;
+        display:none;
+        margin-left: $searchActionGap;
+        width: $searchActionWidth;
+        height: $searchActionHeight;
+        line-height: $searchActionHeight;
+        color: $searchBtnColor; 
     }
 }
