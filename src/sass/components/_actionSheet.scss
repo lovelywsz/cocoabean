@@ -1,9 +1,8 @@
-.alertWrap{
+.actionSheet{
     display: none;
     position: fixed;
     left: 0;
     right: 0;
-    top: 0;
     bottom: 0;
     z-index: $zIndexOverlay;
     -webkit-backdrop-filter:blur(10px);
@@ -16,34 +15,39 @@
         z-index: $zIndexOverlay;
         background:$colorOverlay;
     }
-    .alert{
-        width: pxToRem(268px);
-        position: relative;
-        background: #fff;
-        border-radius: 13px;
-        overflow: hidden;
-        z-index: $zIndexContent;
+    .actions{
         .content{
-            padding:pxToRem(19px) pxToRem(16px);
+            padding:pxToRem(13px) pxToRem(15px);
             text-align: center;
             @include border(border-bottom,1px,solid,$colorBorder);
             h2{
-                font-size: $font17;
+                font-size: $font13;
                 color: $colorText;
             }
             p{
                 margin-top:pxToRem(6px);
                 font-size: $font13;
-                color: $colorText;
+                color: $colorSubText;
             }
         }
+    }
+    .cancaelBtn{margin: pxToRem(8px) 0;}
+    .actions,
+    .cancaelBtn{
+        width: pxToRem(355px);
+        position: relative;
+        background: #fff;
+        border-radius: 13px;
+        overflow: hidden;
+        z-index: $zIndexContent;
         .btnGroup{
-            @include flexContent(row,nowrap,space-between,center);
+            @include flexContent(column,nowrap,center,center);
             li{
-                @include border(border-right,1px,solid,$colorBorder);
+                @include border(border-bottom,1px,solid,$colorBorder);
                 @include flexItem;
-                height: pxToRem(44px);
-                line-height: pxToRem(44px);
+                width: 100%;
+                height: pxToRem(57px);
+                line-height: pxToRem(57px);
                 &:last-child{
                     border: none;
                 }
@@ -52,21 +56,14 @@
                     width: 100%;
                     height: 100%;
                     text-align: center;
-                    font-size: $font17;
-                    color: $colorSubText; 
+                    font-size: $font20;
+                    color: $colorLink; 
                 }
             }
             .cur{
                 a{
-                    color: $colorLink;
+                    color: $colorWarn;
                 }  
-            }
-            &.multipleBtns{
-                flex-direction: column;
-                li{
-                    width: 100%;
-                    @include border(border-bottom,1px,solid,$colorBorder);
-                }
             }
         }
     }

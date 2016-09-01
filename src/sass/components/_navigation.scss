@@ -1,7 +1,6 @@
-$navigationHeight:           $barHeight !default;
-$navigationBgColor:          $colorBarBg !default;
-$navigationTextColor:        $colorText !default;
-$navigationSubTitleSwitch:   true !default;
+$navigationHeight:     $barHeight !default;
+$navigationBgColor:    $colorBarBg !default;
+$navigationTextColor:  $colorText !default;
 
 .navigation{
     position: fixed;
@@ -18,45 +17,55 @@ $navigationSubTitleSwitch:   true !default;
     .navLeft,
     .navRight{
         position: absolute;
-        top:0;
+        top: 0;
+        height: $navigationHeight;
         line-height: $navigationHeight;
+    }
+    .navLeft{
+        width: pxToRem(50px);
+        left: pxToRem(8px);
+    }
+    .navRight{
+        right: pxToRem(8px);
+        text-align: right;
     }
     .navLeft a,
     .navRight a{
-        font-size:pxToRem(17px);
-        color:$colorLink; 
+        display: inline-block;
+        font-size: pxToRem(17px);
+        color: $colorLink; 
     }
     .navLeft .iconFont,
     .navRight .iconFont{
-        font-size:pxToRem(20px);
-        color:$colorLink;
-    }
-    .navLeft{
-        left:pxToRem(8px);
-    }
-    .navRight{
-        right:pxToRem(8px);
+        vertical-align: top;
+        font-size: pxToRem(16px);
+        color: $colorLink;
     }
     .title{
         @include flexContent(column,nowrap,center,center);
-        position:absolute;
+        position: absolute;
         height: $navigationHeight;
-        width:100%;
-        text-align:center;
-    }
-        h2{
-            color: $color0;
-            font-size: $font17;
-            max-width: pxToRem(275px);
-            @extend %textEllipsis;
-        }
-    @if $navigationSubTitleSwitch{
+        width: 100%;
+        text-align: center;
+        h2,
         h3{
-            flex:none;
-            color: $color6;
-            font-size: $font13;
             max-width: pxToRem(275px);
-            @extend %textEllipsis;
+            @extend %textEllipsis;  
         }
+        h2{
+            color: $colorText;
+            font-size: $font17;
+        }
+        h3{
+            color: $colorSubText;
+            font-size: $font13;
+        }
+    }
+    .navTab{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: pxToRem(152px);
     }
 }

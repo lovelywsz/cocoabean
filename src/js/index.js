@@ -11,5 +11,17 @@ $(function() {
         .on('click',function(){
             $(this).removeClass('active');
         });
+    });
+    $('.actionSheetBtn').on('click', function(){
+        $('.actionSheet')
+        .addClass('active')
+        .on('click', function(){
+            $(this).removeClass('active');
+        });
+    });
+    $('.navLeft').on('click', function() {
+        console.log("dfsf");
+        window.location.href = '../index.html' ;
+        //window.history.back();
     })
 })

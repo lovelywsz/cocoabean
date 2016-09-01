@@ -27,28 +27,32 @@ $listGap: pxToRem(20px);
         font-size: $font16;
         color: $colorText;
     }
-    ul{
+    .listWrap{
         background:$colorBgPanel;
-        li{
+        .item{
             @include flexContent(row,nowrap,center,center);
             padding: 0 pxToRem(15px);
             height: pxToRem(45px);
-            line-height: pxToRem(45px);
             @include border(border-bottom,1px,solid,$colorBorder);
             &:last-child{
                 border:none;
             }
-            .item{
+            .title{
                 @include flexItem;
+                a{
+                    display: block;
+                }
             }
-            .#{$preIconFont}{
+            .sub{
                 flex:none;
                 color: $colorSubText;
+                .#{$preIconFont}{
                 font-size:pxToRem(16px);
-            }
-            a{
-                display:block;
-                color: $colorText;
+                }
+                a{
+                    display:block;
+                    color: $colorText;
+                }
             }
         }
     } 

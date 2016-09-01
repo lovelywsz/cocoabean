@@ -1,0 +1,25 @@
+.miniTab ul{
+    @include flexContent(row,nowrap,space-between,center);
+    @include border(border,1px,solid,$colorLink);
+    height: pxToRem(29px);
+    line-height: pxToRem(29px);
+    border-radius: pxToRem(5px);
+    box-sizing: border-box;
+    li{
+        @include flexItem;
+        a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size:pxToRem(13px);
+            color:$colorLink; 
+        }
+    }
+    .cur{
+        a{
+            background-color: $colorLink;
+            color: #fff;
+        }  
+    }
+}

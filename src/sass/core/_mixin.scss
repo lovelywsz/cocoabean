@@ -33,6 +33,45 @@
   width: 0%;
 }
 
+/*项目在主轴上的对齐方式*/
+// @mixin flexList($wrapName:name,$itemName:item,$flexName:item,$noneFlexName:item) {
+//     box-shadow: 0 1px 2px -1px rgba(black,0.1);
+//     @include border(border-bottom,1px,solid,$colorBorder);
+//     h2{
+//         padding-left: pxToRem(15px);
+//         height: pxToRem(28px);
+//         line-height: pxToRem(28px);
+//         font-size: $font16;
+//         color: $colorText;
+//     }
+//     .#{$wrapName}{
+//         background:$colorBgPanel;
+//         .#{$itemName}{
+//             @include flexContent(row,nowrap,center,center);
+//             padding: 0 pxToRem(15px);
+//             height: pxToRem(45px);
+//             @include border(border-bottom,1px,solid,$colorBorder);
+//             &:last-child{
+//                 border:none;
+//             }
+//             .#{$flexName}{
+//                 @include flexItem;
+//             }
+//             .#{$noneFlexName}{
+//               flex:none;
+//               color: $colorSubText;
+//               .#{$preIconFont}{
+//                 font-size:pxToRem(16px);
+//               }
+//               a{
+//                 display:block;
+//                 color: $colorText;
+//               }
+//             }
+//         }
+//     }
+// }
+
 //textEllipsis
 %textEllipsis{
   white-space: nowrap;

@@ -87,7 +87,9 @@ input[type="search"]::-webkit-search-decoration {
     font-size: 20px; } }
 
 /*处理1px border*/
-.navigation h2, .navigation h3 {
+/*项目在主轴上的对齐方式*/
+.navigation .title h2,
+.navigation .title h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis; }
@@ -127,7 +129,7 @@ html {
 /*Font Name*/
 @font-face {
   font-family: "cocofont";
-  src: url("https://lovelywsz.github.io/cocoabean/dist/iconfont/cocofont.woff2") format("woff2"), url("https://lovelywsz.github.io/cocoabean/dist/iconfont/cocofont.woff") format("woff"), url("https://lovelywsz.github.io/cocoabean/dist/iconfont/cocofont.svg") format("svg"), url("https://lovelywsz.github.io/cocoabean/dist/iconfont/cocofont.ttf") format("truetype");
+  src: url("../../../dist/iconfont/cocofont.woff2") format("woff2"), url("../../../dist/iconfont/cocofont.woff") format("woff"), url("../../../dist/iconfont/cocofont.svg") format("svg"), url("../../../dist/iconfont/cocofont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -182,19 +184,24 @@ html {
   .navigation .navRight {
     position: absolute;
     top: 0;
+    height: 2.75rem;
     line-height: 2.75rem; }
+  .navigation .navLeft {
+    width: 3.125rem;
+    left: 0.5rem; }
+  .navigation .navRight {
+    right: 0.5rem;
+    text-align: right; }
   .navigation .navLeft a,
   .navigation .navRight a {
+    display: inline-block;
     font-size: 1.0625rem;
     color: #0076FF; }
   .navigation .navLeft .iconFont,
   .navigation .navRight .iconFont {
-    font-size: 1.25rem;
+    vertical-align: top;
+    font-size: 1rem;
     color: #0076FF; }
-  .navigation .navLeft {
-    left: 0.5rem; }
-  .navigation .navRight {
-    right: 0.5rem; }
   .navigation .title {
     display: -ms-flexbox;
     display: flex;
@@ -215,16 +222,21 @@ html {
     height: 2.75rem;
     width: 100%;
     text-align: center; }
-  .navigation h2 {
-    color: #000;
-    font-size: 1.0625rem;
-    max-width: 17.1875rem; }
-  .navigation h3 {
-    -ms-flex: none;
-        flex: none;
-    color: #666;
-    font-size: 0.8125rem;
-    max-width: 17.1875rem; }
+    .navigation .title h2,
+    .navigation .title h3 {
+      max-width: 17.1875rem; }
+    .navigation .title h2 {
+      color: #030303;
+      font-size: 1.0625rem; }
+    .navigation .title h3 {
+      color: #8F8E94;
+      font-size: 0.8125rem; }
+  .navigation .navTab {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9.5rem; }
 
 .tabbar ul {
   display: -ms-flexbox;
@@ -306,9 +318,9 @@ html {
     line-height: 1.75rem;
     font-size: 1rem;
     color: #030303; }
-  .baseList ul {
+  .baseList .listWrap {
     background: #fff; }
-    .baseList ul li {
+    .baseList .listWrap .item {
       display: -ms-flexbox;
       display: flex;
       /*主轴方向*/
@@ -326,23 +338,25 @@ html {
           align-items: center;
       padding: 0 0.9375rem;
       height: 2.8125rem;
-      line-height: 2.8125rem;
       border-bottom: 1px solid #dbdbdb; }
-      .iosx2 .baseList ul li {
+      .iosx2 .baseList .listWrap .item {
         border-bottom: 0.5px solid #dbdbdb; }
-      .iosx3 .baseList ul li {
+      .iosx3 .baseList .listWrap .item {
         border-bottom: 0.35714px solid #dbdbdb; }
-      .baseList ul li:last-child {
+      .baseList .listWrap .item:last-child {
         border: none; }
-      .baseList ul li .item {
+      .baseList .listWrap .item .title {
         -ms-flex: 1;
             flex: 1;
         width: 0%; }
-      .baseList ul li .iconFont {
+        .baseList .listWrap .item .title a {
+          display: block; }
+      .baseList .listWrap .item .sub {
         -ms-flex: none;
             flex: none;
-        color: #8F8E94;
-        font-size: 1rem; }
-      .baseList ul li a {
-        display: block;
-        color: #030303; }
+        color: #8F8E94; }
+        .baseList .listWrap .item .sub .iconFont {
+          font-size: 1rem; }
+        .baseList .listWrap .item .sub a {
+          display: block;
+          color: #030303; }

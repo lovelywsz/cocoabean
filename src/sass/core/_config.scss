@@ -7,7 +7,7 @@ $fontSize:          16px !default;
   @return $px / $fontSize * 1em;
 }
 
-$fontFilePath:      "https://lovelywsz.github.io/cocoabean/dist/iconfont/cocofont";
+$fontFilePath:      "../../../dist/iconfont/cocofont";
 $preIconFont:       "iconFont";
 $button:             "btn";
 

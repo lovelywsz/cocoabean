@@ -214,11 +214,13 @@ $searchHolderTextColor: #fff;
 }
 
 .textareaView{
+    width: pxToRem(340px);
+    margin: 0 auto;
     position: relative;
     color: $colorPlaceholder;
     textarea{
         width: 100%;
-        padding: pxToRem(10px);
+        padding: pxToRem(5px);
         font-size: $font13;
         @include border(border,1px,solid,$colorBorder);
         -webkit-appearance:none;
@@ -230,8 +232,8 @@ $searchHolderTextColor: #fff;
     }
     .tips{
         position: absolute;
-        bottom: pxToRem(7px);
-        right: pxToRem(10px);
+        bottom: pxToRem(8px);
+        right: pxToRem(8px);
         font-size: $font11;
         .#{$button}-round{
             vertical-align: middle;
@@ -241,17 +243,25 @@ $searchHolderTextColor: #fff;
 }
 .formList{
     box-shadow: 0 1px 2px -1px rgba(black,0.1);
-    width: 100%;
+    @include border(border-bottom,1px,solid,$colorBorder);
+    h2{
+        padding-left: pxToRem(15px);
+        height: pxToRem(28px);
+        line-height: pxToRem(28px);
+        font-size: $font14;
+        color: $colorSubText;
+    }
+    .content{background-color:#fff;}
     .item{
-        @include flexContent(row,nowrap,center,center);
+        @include flexContent(row,nowrap,space-between,center);
         @include border(border-top,1px,solid,$colorBorder);
-        font-size: $font17;
         color:$colorText;
         height: pxToRem(46px);
         line-height: pxToRem(46px);
         box-sizing:border-box;
         .title{
             width: pxToRem(80px);
+            font-size: $font17;
             text-align: right;
             span{
                 color: $colorWarn;
@@ -262,15 +272,16 @@ $searchHolderTextColor: #fff;
             @include flexItem;
             input{
                 width:100%;
-                padding-left:pxToRem(8px);
+                padding-left: pxToRem(15px);
                 font-size: $font17;
                 border:none;
             }
         }
         .tips{
-            flex:none;
-            color:$colorSubText;
-            font-size: $font17;
+            margin-right: pxToRem(15px);
+            flex: none;
+            color: $colorSubText;
+            font-size: $font15;
             .#{$preIconFont}{
                 font-size: 0.9rem;
             }
