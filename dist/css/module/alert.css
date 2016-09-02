@@ -129,7 +129,7 @@ html {
 /*Font Name*/
 @font-face {
   font-family: "cocofont";
-  src: url("../../../dist/iconfont/cocofont.woff2") format("woff2"), url("../../../dist/iconfont/cocofont.woff") format("woff"), url("../../../dist/iconfont/cocofont.svg") format("svg"), url("../../../dist/iconfont/cocofont.ttf") format("truetype");
+  src: url("../../iconfont/cocofont.woff2") format("woff2"), url("../../iconfont/cocofont.woff") format("woff"), url("../../iconfont/cocofont.svg") format("svg"), url("../../iconfont/cocofont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 

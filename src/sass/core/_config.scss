@@ -7,7 +7,8 @@ $fontSize:          16px !default;
   @return $px / $fontSize * 1em;
 }
 
-$fontFilePath:      "../../../dist/iconfont/cocofont";
+$fontFilePath:      "../../iconfont/cocofont";
+$svgSpritPath:      "../../images/sprite";
 $preIconFont:       "iconFont";
 $button:             "btn";
 

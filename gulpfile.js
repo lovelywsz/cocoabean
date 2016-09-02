@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    path = require('path'),
     plugins = require('gulp-load-plugins')(),//自动加载插件
     browserSync = require('browser-sync'),//同步
     reload = browserSync.reload;
@@ -9,22 +10,26 @@ var gulp = require('gulp'),
     //svgSprite = require('gulp-svg-sprite');//svg拼图 
 
 //定义文件路径
+var cocoabean = {
+    src : './src/',
+    dest : './dist/'
+}
 var paths = {
     css: {
-        src  : 'src/sass/**/*.scss',
-        dest : 'dist/css/'
+        src  : path.join(cocoabean.src, 'sass/**/*.scss'),
+        dest : path.join(cocoabean.dest, 'css/')
     },
     svg: {
-        src  : 'src/svg/**/*.svg',
-        dest : 'dist/images/'
+        src  : path.join(cocoabean.src, 'svg/**/*.svg'),
+        dest : path.join(cocoabean.dest, 'images/')
     },
     html: {
-        src  : 'src/html/**/*.html',
-        dest : ''
+        src  : './html/**/*.html',
+        dest : ('')
     },
     font: {
-        src  : 'src/iconfont/**/*.svg',
-        dest : 'dist/iconfont/'
+        src  : path.join(cocoabean.src, 'iconfont/**/*.svg'),
+        dest : path.join(cocoabean.dest, 'iconfont/')
     }
 }
 
