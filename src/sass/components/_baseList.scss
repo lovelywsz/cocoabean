@@ -1,23 +1,8 @@
 /**
- * panel
- */
-$listGap: pxToRem(20px);
-
-.normalPanel{
-    padding: $listGap;
-    box-shadow: 0 1px 2px -1px rgba(black,0.1);
-    @include border(border-bottom,1px,solid,$colorBorder);
-    background:$colorBgPanel;
-    h3{
-        font-size: pxToRem(22px);
-        color:$colorText;
-    }
-    .info{
-        margin-top: $gap;
-    }
-}
-
-.baseList{
+$wrapName：列表最外层类名 $itemName：flex父类类名 $flexName flex子类类名 $attrName右边附属信息类名 
+$justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐方式
+*/
+@mixin flexList($wrapName:wrap,$itemName:item,$flexName:flex,$attrName:attr,$justifyContent:flex-start,$alignItems: stretch){
     box-shadow: 0 1px 2px -1px rgba(black,0.1);
     @include border(border-bottom,1px,solid,$colorBorder);
     h2{
@@ -26,34 +11,57 @@ $listGap: pxToRem(20px);
         line-height: pxToRem(28px);
         font-size: $font16;
         color: $colorText;
-    }
-    .listWrap{
-        background:$colorBgPanel;
-        .item{
-            @include flexContent(row,nowrap,center,center);
-            padding: 0 pxToRem(15px);
-            height: pxToRem(45px);
-            @include border(border-bottom,1px,solid,$colorBorder);
-            &:last-child{
-                border:none;
-            }
-            .info{
-                @include flexItem;
-                a{
-                    display: block;
-                }
-            }
-            .attr{
-                flex:none;
-                color: $colorSubText;
-                .#{$preIconFont}{
-                font-size:pxToRem(16px);
-                }
-                a{
-                    display:block;
-                    color: $colorText;
-                }
-            }
+        .sub{
+           font-size: $font14;
+            color: $colorSubText;
+ 
         }
-    } 
+    }
+    .#{$wrapName}{
+        background:$colorBgPanel;
+    }
+    .#{$itemName}{
+        box-sizing: border-box;
+        @include flexContent(row,nowrap,$justifyContent,$alignItems);
+        padding: pxToRem(7px) pxToRem(15px);
+        @include border(border-bottom,1px,solid,$colorBorder);
+        &:last-child{
+            border:none;
+        }
+    }
+    .#{$flexName}{
+        @include flexItem;
+        a{
+            display: block;
+            color: $colorText;
+        }
+    }
+    .#{$attrName}{
+        flex:none;
+        font-size: $font15;
+        color: $colorSubText;
+        .#{$preIconFont}{
+            font-size:pxToRem(16px);
+            width: pxToRem(20px);
+            text-align: right;
+            vertical-align: top;
+        }
+        a{
+            display:block;
+            color: $colorText;
+        }
+    }
+}
+
+.baseList{
+    @include flexList(listWrap,item,info,attr,center,center);
+    .item{
+        min-height: pxToRem(45px);    
+    }
+    .info{
+        .subtitle{
+            font-size: $font14;
+            color: $colorSubText;  
+        }
+    }
 }

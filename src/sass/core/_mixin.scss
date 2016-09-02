@@ -2,10 +2,10 @@
 @mixin border($bdv,$w,$s,$c){
   #{$bdv}: $w $s $c;
   @at-root .iosx2 &{
-       #{$bdv}: $w/2 $s $c;
+	   #{$bdv}: $w/2 $s $c;
   }
   @at-root .iosx3 &{
-       #{$bdv}: $w/2.8 $s $c;
+	   #{$bdv}: $w/2.8 $s $c;
   }
 }
 //flex
@@ -32,45 +32,12 @@
   flex: 1;
   width: 0%;
 }
-
-/*项目在主轴上的对齐方式*/
-// @mixin flexList($wrapName:name,$itemName:item,$flexName:item,$noneFlexName:item) {
-//     box-shadow: 0 1px 2px -1px rgba(black,0.1);
-//     @include border(border-bottom,1px,solid,$colorBorder);
-//     h2{
-//         padding-left: pxToRem(15px);
-//         height: pxToRem(28px);
-//         line-height: pxToRem(28px);
-//         font-size: $font16;
-//         color: $colorText;
-//     }
-//     .#{$wrapName}{
-//         background:$colorBgPanel;
-//         .#{$itemName}{
-//             @include flexContent(row,nowrap,center,center);
-//             padding: 0 pxToRem(15px);
-//             height: pxToRem(45px);
-//             @include border(border-bottom,1px,solid,$colorBorder);
-//             &:last-child{
-//                 border:none;
-//             }
-//             .#{$flexName}{
-//                 @include flexItem;
-//             }
-//             .#{$noneFlexName}{
-//               flex:none;
-//               color: $colorSubText;
-//               .#{$preIconFont}{
-//                 font-size:pxToRem(16px);
-//               }
-//               a{
-//                 display:block;
-//                 color: $colorText;
-//               }
-//             }
-//         }
-//     }
-// }
+@mixin flexItem($itemFlex:1,$itemWidth:0%){
+  -webkit-box-flex: $itemFlex;
+  -webkit-flex: $itemFlex;
+  flex: $itemFlex;
+  width: $itemWidth;
+}
 
 //textEllipsis
 %textEllipsis{
@@ -94,14 +61,14 @@
 
 //Clearfix
 @mixin clearfix() {
-    &:before,
-    &:after {
-        content: "";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
 }
 
 .container {
@@ -113,13 +80,13 @@
 /// @param {String} $context
 @mixin when-inside($context) {
   #{$context} & {
-    @content;
+	@content;
   }
 }
 
 .foo {
   @include when-inside('.active') {
-    animation: fadeIn 0.3s 1s forwards;
+	animation: fadeIn 0.3s 1s forwards;
   }
 }
 
@@ -135,17 +102,17 @@ $breakpoints: (
   $query: map-get($breakpoints, $breakpoint);
   
   @if not $query {
-    @error 'No value found for `#{$breakpoint}`. Please make sure it is defined in `$breakpoints` map.';
+	@error 'No value found for `#{$breakpoint}`. Please make sure it is defined in `$breakpoints` map.';
   }
 
   @media #{if(type-of($query) == 'string', unquote($query), inspect($query))} {
-    @content;
+	@content;
   }
 }
 
 .foo {
   @include respond-to('sm') {
-    padding-left: 20px;
-    padding-right: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
   }
 }

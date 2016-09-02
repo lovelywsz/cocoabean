@@ -87,7 +87,6 @@ input[type="search"]::-webkit-search-decoration {
     font-size: 20px; } }
 
 /*处理1px border*/
-/*项目在主轴上的对齐方式*/
 .navigation .title h2,
 .navigation .title h3 {
   white-space: nowrap;

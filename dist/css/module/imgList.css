@@ -237,99 +237,35 @@ html {
     transform: translate(-50%, -50%);
     width: 9.5rem; }
 
-.actionSheet {
-  display: none;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 3000;
-  -webkit-backdrop-filter: blur(10px); }
-  .actionSheet .overlay {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 3000;
-    background: rgba(0, 0, 0, 0.7); }
-  .actionSheet .actions .content {
-    padding: 0.8125rem 0.9375rem;
-    text-align: center;
-    border-bottom: 1px solid #dbdbdb; }
-    .iosx2 .actionSheet .actions .content {
-      border-bottom: 0.5px solid #dbdbdb; }
-    .iosx3 .actionSheet .actions .content {
-      border-bottom: 0.35714px solid #dbdbdb; }
-    .actionSheet .actions .content h2 {
-      font-size: 0.8125rem;
-      color: #030303; }
-    .actionSheet .actions .content p {
-      margin-top: 0.375rem;
-      font-size: 0.8125rem;
+/**
+$wrapName：列表最外层类名 $itemName：flex父类类名 $flexName flex子类类名 $attrName右边附属信息类名 
+$justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐方式
+*/
+.baseList {
+  box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #dbdbdb; }
+  .iosx2 .baseList {
+    border-bottom: 0.5px solid #dbdbdb; }
+  .iosx3 .baseList {
+    border-bottom: 0.35714px solid #dbdbdb; }
+  .baseList h2 {
+    padding-left: 0.9375rem;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    font-size: 1rem;
+    color: #030303; }
+    .baseList h2 .sub {
+      font-size: 0.875rem;
       color: #8F8E94; }
-  .actionSheet .cancaelBtn {
-    margin: 0.5rem 0; }
-  .actionSheet .actions,
-  .actionSheet .cancaelBtn {
-    width: 22.1875rem;
-    position: relative;
-    background: #fff;
-    border-radius: 13px;
-    overflow: hidden;
-    z-index: 4000; }
-    .actionSheet .actions .btnGroup,
-    .actionSheet .cancaelBtn .btnGroup {
-      display: -ms-flexbox;
-      display: flex;
-      /*主轴方向*/
-      -ms-flex-direction: column;
-          flex-direction: column;
-      /*换行*/
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
-      /*flex-flow属性是flex-direction和flex-wrap的简写形式，默认值为row nowrap*/
-      /*项目在主轴上的对齐方式*/
-      -ms-flex-pack: center;
-          justify-content: center;
-      /*项目在交叉轴上如何对齐*/
-      -ms-flex-align: center;
-          align-items: center; }
-      .actionSheet .actions .btnGroup li,
-      .actionSheet .cancaelBtn .btnGroup li {
-        border-bottom: 1px solid #dbdbdb;
-        -ms-flex: 1;
-            flex: 1;
-        width: 0%;
-        width: 100%;
-        height: 3.5625rem;
-        line-height: 3.5625rem; }
-        .iosx2 .actionSheet .actions .btnGroup li, .iosx2
-        .actionSheet .cancaelBtn .btnGroup li {
-          border-bottom: 0.5px solid #dbdbdb; }
-        .iosx3 .actionSheet .actions .btnGroup li, .iosx3
-        .actionSheet .cancaelBtn .btnGroup li {
-          border-bottom: 0.35714px solid #dbdbdb; }
-        .actionSheet .actions .btnGroup li:last-child,
-        .actionSheet .cancaelBtn .btnGroup li:last-child {
-          border: none; }
-        .actionSheet .actions .btnGroup li a,
-        .actionSheet .cancaelBtn .btnGroup li a {
-          display: block;
-          width: 100%;
-          height: 100%;
-          text-align: center;
-          font-size: 1.25rem;
-          color: #0076FF; }
-      .actionSheet .actions .btnGroup .cur a,
-      .actionSheet .cancaelBtn .btnGroup .cur a {
-        color: #FE3824; }
-  .actionSheet.active {
+  .baseList .listWrap {
+    background: #fff; }
+  .baseList .item {
+    box-sizing: border-box;
     display: -ms-flexbox;
     display: flex;
     /*主轴方向*/
-    -ms-flex-direction: column;
-        flex-direction: column;
+    -ms-flex-direction: row;
+        flex-direction: row;
     /*换行*/
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -339,4 +275,98 @@ html {
         justify-content: center;
     /*项目在交叉轴上如何对齐*/
     -ms-flex-align: center;
+        align-items: center;
+    padding: 0.4375rem 0.9375rem;
+    border-bottom: 1px solid #dbdbdb; }
+    .iosx2 .baseList .item {
+      border-bottom: 0.5px solid #dbdbdb; }
+    .iosx3 .baseList .item {
+      border-bottom: 0.35714px solid #dbdbdb; }
+    .baseList .item:last-child {
+      border: none; }
+  .baseList .info {
+    -ms-flex: 1;
+        flex: 1;
+    width: 0%; }
+    .baseList .info a {
+      display: block;
+      color: #030303; }
+  .baseList .attr {
+    -ms-flex: none;
+        flex: none;
+    font-size: 0.9375rem;
+    color: #8F8E94; }
+    .baseList .attr .iconFont {
+      font-size: 1rem;
+      width: 1.25rem;
+      text-align: right;
+      vertical-align: top; }
+    .baseList .attr a {
+      display: block;
+      color: #030303; }
+  .baseList .item {
+    min-height: 2.8125rem; }
+  .baseList .info .subtitle {
+    font-size: 0.875rem;
+    color: #8F8E94; }
+
+.imgList {
+  box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #dbdbdb; }
+  .iosx2 .imgList {
+    border-bottom: 0.5px solid #dbdbdb; }
+  .iosx3 .imgList {
+    border-bottom: 0.35714px solid #dbdbdb; }
+  .imgList h2 {
+    padding-left: 0.9375rem;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    font-size: 1rem;
+    color: #030303; }
+    .imgList h2 .sub {
+      font-size: 0.875rem;
+      color: #8F8E94; }
+  .imgList .listWrap {
+    box-sizing: border-box;
+    background: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    /*主轴方向*/
+    -ms-flex-direction: row;
+        flex-direction: row;
+    /*换行*/
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    /*flex-flow属性是flex-direction和flex-wrap的简写形式，默认值为row nowrap*/
+    /*项目在主轴上的对齐方式*/
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    /*项目在交叉轴上如何对齐*/
+    -ms-flex-align: center;
         align-items: center; }
+    .imgList .listWrap .item {
+      margin-top: 0.625rem; }
+    .imgList .listWrap.twoPart .item {
+      width: 50%; }
+    .imgList .listWrap.threePart .item {
+      width: 33.33333%; }
+    .imgList .listWrap.fourPart .item {
+      width: 25%; }
+    .imgList .listWrap .img {
+      margin: 0 auto;
+      width: 5.625rem;
+      height: 5.625rem; }
+      .imgList .listWrap .img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%; }
+    .imgList .listWrap .info {
+      text-align: center;
+      font-size: 0.875rem;
+      line-height: 1.25rem; }
+      .imgList .listWrap .info a {
+        display: block;
+        color: #030303; }
+      .imgList .listWrap .info .subtitle {
+        font-size: 0.75rem;
+        color: #8F8E94; }

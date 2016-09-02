@@ -241,50 +241,27 @@ $searchHolderTextColor: #fff;
         }
     }
 }
+
 .formList{
-    box-shadow: 0 1px 2px -1px rgba(black,0.1);
-    @include border(border-bottom,1px,solid,$colorBorder);
-    h2{
-        padding-left: pxToRem(15px);
-        height: pxToRem(28px);
-        line-height: pxToRem(28px);
-        font-size: $font14;
-        color: $colorSubText;
-    }
-    .content{background-color:#fff;}
+    @include flexList(content,item,value,tips,space-between,center);
     .item{
-        @include flexContent(row,nowrap,space-between,center);
-        @include border(border-top,1px,solid,$colorBorder);
-        color:$colorText;
-        height: pxToRem(46px);
-        line-height: pxToRem(46px);
-        box-sizing:border-box;
-        .title{
-            width: pxToRem(80px);
+        height: pxToRem(46px);  
+    }
+    .title{
+        width: pxToRem(80px);
+        font-size: $font17;
+        text-align: right;
+        span{
+            color: $colorWarn;
+            vertical-align: middle;
+        }
+    }
+    .value{
+        input{
+            width:100%;
+            padding-left: pxToRem(15px);
             font-size: $font17;
-            text-align: right;
-            span{
-                color: $colorWarn;
-                vertical-align: middle;
-            }
-        }
-        .value{
-            @include flexItem;
-            input{
-                width:100%;
-                padding-left: pxToRem(15px);
-                font-size: $font17;
-                border:none;
-            }
-        }
-        .tips{
-            margin-right: pxToRem(15px);
-            flex: none;
-            color: $colorSubText;
-            font-size: $font15;
-            .#{$preIconFont}{
-                font-size: 0.9rem;
-            }
+            border:none;
         }
     }
 }

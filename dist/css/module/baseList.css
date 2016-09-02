@@ -87,7 +87,6 @@ input[type="search"]::-webkit-search-decoration {
     font-size: 20px; } }
 
 /*处理1px border*/
-/*项目在主轴上的对齐方式*/
 .navigation .title h2,
 .navigation .title h3 {
   white-space: nowrap;
@@ -239,23 +238,9 @@ html {
     width: 9.5rem; }
 
 /**
- * panel
- */
-.normalPanel {
-  padding: 1.25rem;
-  box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid #dbdbdb;
-  background: #fff; }
-  .iosx2 .normalPanel {
-    border-bottom: 0.5px solid #dbdbdb; }
-  .iosx3 .normalPanel {
-    border-bottom: 0.35714px solid #dbdbdb; }
-  .normalPanel h3 {
-    font-size: 1.375rem;
-    color: #030303; }
-  .normalPanel .info {
-    margin-top: 0.625rem; }
-
+$wrapName：列表最外层类名 $itemName：flex父类类名 $flexName flex子类类名 $attrName右边附属信息类名 
+$justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐方式
+*/
 .baseList {
   box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #dbdbdb; }
@@ -271,43 +256,61 @@ html {
     color: #030303; }
   .baseList .listWrap {
     background: #fff; }
-    .baseList .listWrap .item {
-      display: -ms-flexbox;
-      display: flex;
-      /*主轴方向*/
-      -ms-flex-direction: row;
-          flex-direction: row;
-      /*换行*/
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
-      /*flex-flow属性是flex-direction和flex-wrap的简写形式，默认值为row nowrap*/
-      /*项目在主轴上的对齐方式*/
-      -ms-flex-pack: center;
-          justify-content: center;
-      /*项目在交叉轴上如何对齐*/
-      -ms-flex-align: center;
-          align-items: center;
-      padding: 0 0.9375rem;
-      height: 2.8125rem;
-      border-bottom: 1px solid #dbdbdb; }
-      .iosx2 .baseList .listWrap .item {
-        border-bottom: 0.5px solid #dbdbdb; }
-      .iosx3 .baseList .listWrap .item {
-        border-bottom: 0.35714px solid #dbdbdb; }
-      .baseList .listWrap .item:last-child {
-        border: none; }
-      .baseList .listWrap .item .info {
-        -ms-flex: 1;
-            flex: 1;
-        width: 0%; }
-        .baseList .listWrap .item .info a {
-          display: block; }
-      .baseList .listWrap .item .attr {
-        -ms-flex: none;
-            flex: none;
-        color: #8F8E94; }
-        .baseList .listWrap .item .attr .iconFont {
-          font-size: 1rem; }
-        .baseList .listWrap .item .attr a {
-          display: block;
-          color: #030303; }
+  .baseList .item {
+    box-sizing: border-box;
+    display: -ms-flexbox;
+    display: flex;
+    /*主轴方向*/
+    -ms-flex-direction: row;
+        flex-direction: row;
+    /*换行*/
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    /*flex-flow属性是flex-direction和flex-wrap的简写形式，默认值为row nowrap*/
+    /*项目在主轴上的对齐方式*/
+    -ms-flex-pack: center;
+        justify-content: center;
+    /*项目在交叉轴上如何对齐*/
+    -ms-flex-align: center;
+        align-items: center;
+    padding: 0 0.9375rem;
+    border-bottom: 1px solid #dbdbdb; }
+    .iosx2 .baseList .item {
+      border-bottom: 0.5px solid #dbdbdb; }
+    .iosx3 .baseList .item {
+      border-bottom: 0.35714px solid #dbdbdb; }
+    .baseList .item:last-child {
+      border: none; }
+  .baseList .info {
+    -ms-flex: 1;
+        flex: 1;
+    width: 0%; }
+    .baseList .info a {
+      display: block;
+      color: #030303; }
+  .baseList .attr {
+    -ms-flex: none;
+        flex: none;
+    font-size: 0.9375rem;
+    color: #8F8E94; }
+    .baseList .attr .iconFont {
+      font-size: 1rem;
+      width: 1.25rem;
+      text-align: right;
+      vertical-align: top; }
+    .baseList .attr a {
+      display: block;
+      color: #030303; }
+  .baseList .item {
+    height: 2.8125rem; }
+  .baseList .info .subtitle {
+    font-size: 0.875rem;
+    color: #8F8E94; }
+  .baseList .avator {
+    width: 1.8125rem;
+    height: 1.8125rem;
+    margin-right: 0.5625rem; }
+    .baseList .avator img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0.1875rem; }
