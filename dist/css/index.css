@@ -790,18 +790,18 @@ html {
         border-bottom: 0.35714px solid #dbdbdb; }
       .baseList .listWrap .item:last-child {
         border: none; }
-      .baseList .listWrap .item .title {
+      .baseList .listWrap .item .info {
         -ms-flex: 1;
             flex: 1;
         width: 0%; }
-        .baseList .listWrap .item .title a {
+        .baseList .listWrap .item .info a {
           display: block; }
-      .baseList .listWrap .item .sub {
+      .baseList .listWrap .item .attr {
         -ms-flex: none;
             flex: none;
         color: #8F8E94; }
-        .baseList .listWrap .item .sub .iconFont {
+        .baseList .listWrap .item .attr .iconFont {
           font-size: 1rem; }
-        .baseList .listWrap .item .sub a {
+        .baseList .listWrap .item .attr a {
           display: block;
           color: #030303; }

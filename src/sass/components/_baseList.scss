@@ -37,13 +37,13 @@ $listGap: pxToRem(20px);
             &:last-child{
                 border:none;
             }
-            .title{
+            .info{
                 @include flexItem;
                 a{
                     display: block;
                 }
             }
-            .sub{
+            .attr{
                 flex:none;
                 color: $colorSubText;
                 .#{$preIconFont}{
