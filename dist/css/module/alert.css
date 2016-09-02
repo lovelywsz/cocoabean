@@ -137,32 +137,215 @@ html {
   display: inline-block;
   -webkit-font-smoothing: antialiased; }
 
-.iconFontAdd::before {
+.iconFont-add::before {
   content: "\EA01"; }
 
-.iconFontAlubumsOff::before {
+.iconFont-alubums-off::before {
   content: "\EA02"; }
 
-.iconFontBack::before {
+.iconFont-back::before {
   content: "\EA03"; }
 
-.iconFontCloudOff::before {
+.iconFont-cloud-off::before {
   content: "\EA04"; }
 
-.iconFontNext::before {
+.iconFont-next::before {
   content: "\EA05"; }
 
-.iconFontStop::before {
+.iconFont-stop::before {
   content: "\EA06"; }
 
-.iconFontWorldOff::before {
+.iconFont-world-off::before {
   content: "\EA07"; }
 
-.iconFontCheck::before {
+.iconFont-check::before {
   content: "\EA08"; }
 
-.iconFontSearch::before {
+.iconFont-search::before {
   content: "\EA09"; }
+
+.iconFont-action::before {
+  content: "\EA0A"; }
+
+.iconFont-bookmarks::before {
+  content: "\EA0B"; }
+
+.iconFont-camera::before {
+  content: "\EA0C"; }
+
+.iconFont-compose::before {
+  content: "\EA0D"; }
+
+.iconFont-fast-forward::before {
+  content: "\EA0E"; }
+
+.iconFont-organize::before {
+  content: "\EA0F"; }
+
+.iconFont-page::before {
+  content: "\EA10"; }
+
+.iconFont-pause::before {
+  content: "\EA11"; }
+
+.iconFont-play::before {
+  content: "\EA12"; }
+
+.iconFont-prev::before {
+  content: "\EA13"; }
+
+.iconFont-refresh::before {
+  content: "\EA14"; }
+
+.iconFont-reply::before {
+  content: "\EA15"; }
+
+.iconFont-rewind::before {
+  content: "\EA16"; }
+
+.iconFont-trash::before {
+  content: "\EA17"; }
+
+.iconFont-wishlist::before {
+  content: "\EA18"; }
+
+/**
+* button
+*/
+[class^="btn"] {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; }
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0;
+  min-width: 4.6875rem;
+  height: 1.625rem;
+  line-height: 1.625rem;
+  font-size: 0.8125rem;
+  border-radius: 0.1875rem;
+  text-align: center;
+  outline: 0; }
+  .btn.btn-block {
+    width: 100%;
+    display: block; }
+
+.btn-round {
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 1.375em;
+  height: 1.375em;
+  font-size: 1rem;
+  position: relative; }
+  .btn-round:active .iconFont {
+    opacity: 0.6; }
+  .btn-round .iconFont {
+    font-size: 0.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; }
+
+/*按钮名称 文字色 背景色 边框大小 边框颜色 激活文字色 激活背景色 激活边框*/
+.btn-primary {
+  color: #0076FF;
+  background: transparent;
+  border: 1px solid #0076FF; }
+  .iosx2 .btn-primary {
+    border: 0.5px solid #0076FF; }
+  .iosx3 .btn-primary {
+    border: 0.35714px solid #0076FF; }
+  .btn-primary:active {
+    background: #0076FF;
+    border-color: #0076FF;
+    color: #fff; }
+  .btn-primary:disabled, .btn-primary.btn-disabled {
+    color: rgba(0, 118, 255, 0.3); }
+  .btn-primary:disabled:active, .btn-primary.btn-disabled:active {
+    background: transparent;
+    border-color: #0076FF; }
+
+.btn-green {
+  color: #fff;
+  background: #4cd864;
+  border: 0 solid transparent; }
+  .iosx2 .btn-green {
+    border: 0 solid transparent; }
+  .iosx3 .btn-green {
+    border: 0 solid transparent; }
+  .btn-green:active {
+    background: #4cd864;
+    border-color: transparent;
+    color: #fff; }
+  .btn-green:disabled, .btn-green.btn-disabled {
+    color: rgba(255, 255, 255, 0.3); }
+  .btn-green:disabled:active, .btn-green.btn-disabled:active {
+    background: #4cd864;
+    border-color: transparent; }
+
+.btn-blue {
+  color: #fff;
+  background: #0076FF;
+  border: 0 solid transparent; }
+  .iosx2 .btn-blue {
+    border: 0 solid transparent; }
+  .iosx3 .btn-blue {
+    border: 0 solid transparent; }
+  .btn-blue:active {
+    background: #0076FF;
+    border-color: transparent;
+    color: #fff; }
+  .btn-blue:disabled, .btn-blue.btn-disabled {
+    color: rgba(255, 255, 255, 0.3); }
+  .btn-blue:disabled:active, .btn-blue.btn-disabled:active {
+    background: #0076FF;
+    border-color: transparent; }
+
+.btn-red {
+  color: #fff;
+  background: #FE3824;
+  border: 0 solid transparent; }
+  .iosx2 .btn-red {
+    border: 0 solid transparent; }
+  .iosx3 .btn-red {
+    border: 0 solid transparent; }
+  .btn-red:active {
+    background: #FE3824;
+    border-color: transparent;
+    color: #fff; }
+  .btn-red:disabled, .btn-red.btn-disabled {
+    color: rgba(255, 255, 255, 0.3); }
+  .btn-red:disabled:active, .btn-red.btn-disabled:active {
+    background: #FE3824;
+    border-color: transparent; }
+
+.btn-gray {
+  color: #fff;
+  background: #ccc;
+  border: 0 solid transparent; }
+  .iosx2 .btn-gray {
+    border: 0 solid transparent; }
+  .iosx3 .btn-gray {
+    border: 0 solid transparent; }
+  .btn-gray:active {
+    background: #ccc;
+    border-color: transparent;
+    color: #fff; }
+  .btn-gray:disabled, .btn-gray.btn-disabled {
+    color: rgba(255, 255, 255, 0.3); }
+  .btn-gray:disabled:active, .btn-gray.btn-disabled:active {
+    background: #ccc;
+    border-color: transparent; }
+
+/*Colors*/
+.btn-primary.btn-text-red {
+  color: #FE3824; }
+
+.btn-primary.btn-text-blue {
+  color: #0076FF; }
 
 .navigation {
   position: fixed;

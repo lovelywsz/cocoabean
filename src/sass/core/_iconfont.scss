@@ -21,30 +21,75 @@ $preIconFont : $preIconFont;
     -webkit-font-smoothing:antialiased;
 }
 
-.#{$preIconFont}Add{
+.#{$preIconFont}-add{
     &::before{content:"\EA01";}
 }
-.#{$preIconFont}AlubumsOff{
+.#{$preIconFont}-alubums-off{
     &::before{content:"\EA02";}
 }
-.#{$preIconFont}Back{
+.#{$preIconFont}-back{
     &::before{content:"\EA03";}
 }
-.#{$preIconFont}CloudOff{
+.#{$preIconFont}-cloud-off{
     &::before{content:"\EA04";}
 }
-.#{$preIconFont}Next{
+.#{$preIconFont}-next{
     &::before{content:"\EA05";}
 }
-.#{$preIconFont}Stop{
+.#{$preIconFont}-stop{
     &::before{content:"\EA06";}
 }
-.#{$preIconFont}WorldOff{
+.#{$preIconFont}-world-off{
     &::before{content:"\EA07";}
 }
-.#{$preIconFont}Check{
+.#{$preIconFont}-check{
     &::before{content:"\EA08";}
 }
-.#{$preIconFont}Search{
+.#{$preIconFont}-search{
     &::before{content:"\EA09";}
+}
+.#{$preIconFont}-action{
+    &::before{content:"\EA0A";}
+}
+.#{$preIconFont}-bookmarks{
+    &::before{content:"\EA0B";}
+}
+.#{$preIconFont}-camera{
+    &::before{content:"\EA0C";}
+}
+.#{$preIconFont}-compose{
+    &::before{content:"\EA0D";}
+}
+.#{$preIconFont}-fast-forward{
+    &::before{content:"\EA0E";}
+}
+.#{$preIconFont}-organize{
+    &::before{content:"\EA0F";}
+}
+.#{$preIconFont}-page{
+    &::before{content:"\EA10";}
+}
+.#{$preIconFont}-pause{
+    &::before{content:"\EA11";}
+}
+.#{$preIconFont}-play{
+    &::before{content:"\EA12";}
+}
+.#{$preIconFont}-prev{
+    &::before{content:"\EA13";}
+}
+.#{$preIconFont}-refresh{
+    &::before{content:"\EA14";}
+}
+.#{$preIconFont}-reply{
+    &::before{content:"\EA15";}
+}
+.#{$preIconFont}-rewind{
+    &::before{content:"\EA16";}
+}
+.#{$preIconFont}-trash{
+    &::before{content:"\EA17";}
+}
+.#{$preIconFont}-wishlist{
+    &::before{content:"\EA18";}
 }

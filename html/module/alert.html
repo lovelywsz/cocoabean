@@ -8,20 +8,34 @@
     <script src="../../dist/js/jquery-2.2.3.min.js"></script>
     <script src="../../dist/js/script.js"></script>
     <link rel="stylesheet" href="../../dist/css/module/alert.css">
+    <style type="text/css" media="screen">
+       .textContent{background: #fff;padding: 15px;line-height: 20px;} 
+       .alertBtn{text-align: center;}
+       .alertBtn a{margin:15px 0;}
+    </style>
 </head>
 <body>
 <header class="navigation">
     <div class="navLeft">
-        <span class="iconFont iconFontBack"></span>
+        <span class="iconFont iconFont-back"></span>
     </div>
     <div class="title">
-        <h2>title</h2>
+        <h2>Alert</h2>
     </div>
 </header>
 <main class="mainWrap">
-    <p class="alertBtn"><a href="#">确定提示层</a></p>
-    <p class="alertBtn"><a href="#">确定取消提示层</a></p>
-    <p class="alertBtn"><a href="#">多个操作提示层</a></p>
+    <div class="textContent">
+        <p>本质的东西是用眼睛看不见的，只能用心去看。正因为你为你的玫瑰花费的时光，才使得你的玫瑰变得如此重要。对你驯养过的东西，你永远都有责任。你必须对你的玫瑰负责。</p>
+        <p class="alertBtn">
+            <a href="javascript:;"  class="btn btn-block btn-primary">确定提示层</a>
+        </p>
+        <p class="alertBtn">
+            <a href="javascript:;"  class="btn btn-block btn-primary">确定取消提示层</a>
+        </p>
+        <p class="alertBtn">
+            <a href="javascript:;"  class="btn btn-block btn-primary">多个操作提示层</a>
+        </p>
+    </div>
 </main>
 <section class="alertWrap">
     <div class="overlay"></div>

@@ -152,32 +152,77 @@ html {
   display: inline-block;
   -webkit-font-smoothing: antialiased; }
 
-.iconFontAdd::before {
+.iconFont-add::before {
   content: "\EA01"; }
 
-.iconFontAlubumsOff::before {
+.iconFont-alubums-off::before {
   content: "\EA02"; }
 
-.iconFontBack::before {
+.iconFont-back::before {
   content: "\EA03"; }
 
-.iconFontCloudOff::before {
+.iconFont-cloud-off::before {
   content: "\EA04"; }
 
-.iconFontNext::before {
+.iconFont-next::before {
   content: "\EA05"; }
 
-.iconFontStop::before {
+.iconFont-stop::before {
   content: "\EA06"; }
 
-.iconFontWorldOff::before {
+.iconFont-world-off::before {
   content: "\EA07"; }
 
-.iconFontCheck::before {
+.iconFont-check::before {
   content: "\EA08"; }
 
-.iconFontSearch::before {
+.iconFont-search::before {
   content: "\EA09"; }
+
+.iconFont-action::before {
+  content: "\EA0A"; }
+
+.iconFont-bookmarks::before {
+  content: "\EA0B"; }
+
+.iconFont-camera::before {
+  content: "\EA0C"; }
+
+.iconFont-compose::before {
+  content: "\EA0D"; }
+
+.iconFont-fast-forward::before {
+  content: "\EA0E"; }
+
+.iconFont-organize::before {
+  content: "\EA0F"; }
+
+.iconFont-page::before {
+  content: "\EA10"; }
+
+.iconFont-pause::before {
+  content: "\EA11"; }
+
+.iconFont-play::before {
+  content: "\EA12"; }
+
+.iconFont-prev::before {
+  content: "\EA13"; }
+
+.iconFont-refresh::before {
+  content: "\EA14"; }
+
+.iconFont-reply::before {
+  content: "\EA15"; }
+
+.iconFont-rewind::before {
+  content: "\EA16"; }
+
+.iconFont-trash::before {
+  content: "\EA17"; }
+
+.iconFont-wishlist::before {
+  content: "\EA18"; }
 
 .iconSvg {
   display: inline-block;
@@ -193,6 +238,27 @@ html {
 
 .iconSvg-bluev {
   background-position: -0.625em -2.5em; }
+
+.iconSvg-club {
+  background-position: -0.625em -4.375em; }
+
+.iconSvg-vgirl {
+  background-position: -0.625em -6.25em; }
+
+.iconSvg-male {
+  background-position: -0.625em -8.125em; }
+
+.iconSvg-female {
+  background-position: -0.625em -10em; }
+
+.iconSvg-vip {
+  background-position: -0.625em -11.875em; }
+
+.iconSvg-nvip {
+  background-position: -0.625em -13.75em; }
+
+.iconSvg-like {
+  background-position: -0.625em -15.625em; }
 
 /**
 * button

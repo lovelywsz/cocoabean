@@ -15,7 +15,7 @@ $spriteHeight:auto;
     height: pxToEm(10px);
     font-size: pxToEm(28px);
 }
-$sprite: yellowv bluev;
+$sprite: yellowv bluev club vgirl male female vip nvip like;
 @each $icon in $sprite {
     .#{$imageIcon}-#{$icon} {  
         background-position:pxToEm(-10px) pxToEm(-10px)-((index($sprite,$icon)-1)*pxToEm(30px));
