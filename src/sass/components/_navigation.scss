@@ -18,6 +18,7 @@ $navigationTextColor:  $colorText !default;
     .navRight{
         position: absolute;
         top: 0;
+        z-index: $zIndexNavAction;
         height: $navigationHeight;
         line-height: $navigationHeight;
     }

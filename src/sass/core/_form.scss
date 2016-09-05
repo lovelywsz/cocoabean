@@ -22,20 +22,20 @@ $radioDotColor: #44db5e;
 $radioDotWidth: pxToEm(12px);
 $radioDotHeight: pxToEm(12px);
 
-$searchInputWidth: pxToRem(356px);
-$searchInputHeight: pxToRem(29px);
-$searchInputGap: pxToRem(8px);
-$searchInputBgColor: rgba(0,0,0,0.3);
+$searchInputWidth: pxToRem(343px);
+$searchInputHeight: pxToRem(44px);
+$searchInputGap: pxToRem(10px);
+$searchInputBgColor: #f0f0f0;
 $searchInputRadius: pxToRem(6px);
-$searchInputTextColor: #fff;
+$searchInputTextColor: $colorText;
 $searchInputTextGap: pxToRem(20px);
 $searchActionColor: $colorLink;
 $searchActionWidth: pxToRem(53px);
 $searchActionHeight: pxToRem(22px);
 $searchActionGap: pxToRem(10px);
-$searchIconGap: pxToRem(8px);
-$searchIconClor : #fff;
-$searchHolderTextColor: #fff;
+$searchIconGap: pxToRem(10px);
+$searchIconClor : #717171;
+$searchHolderTextColor: #bbbbc1;
 
 .iconSwitch{
     display: inline-block;
@@ -164,13 +164,12 @@ $searchHolderTextColor: #fff;
     position: relative;
     @include flexContent(row,nowrap,space-between,center);
     .#{$preIconFont}{
-        display: none;
         position: absolute;
         top:50%;
         -webkit-transform:translateY(-50%);
         left: $searchIconGap;
         color: $searchIconClor;
-        font-size: $font13;
+        font-size: $font16;
     }
     input[type="search"]{
         @include flexItem;
@@ -181,17 +180,17 @@ $searchHolderTextColor: #fff;
         border: none;
         border-radius: $searchInputRadius;
         background: $searchInputBgColor;
-        font-size: $font14;
-        text-align:center;
+        font-size: $font16;
         color: $searchInputTextColor;
+        text-indent: $searchInputTextGap;   
     }
     input[type="search"]::-webkit-input-placeholder{ 
         font-family: '#{$fontFamilyName}';
         color:$searchHolderTextColor;
     }
     .actionBtn{
-        flex:none;
-        display:none;
+        flex: none;
+        display: none;
         margin-left: $searchActionGap;
         width: $searchActionWidth;
         height: $searchActionHeight;
@@ -199,13 +198,8 @@ $searchHolderTextColor: #fff;
         color: $searchActionColor; 
     }
     &.active{
-        .#{$preIconFont},
         .actionBtn{
             display: block;
-        }
-        input[type="search"]{
-            text-align: left;
-            text-indent: $searchInputTextGap;   
         }
         input[type="search"]::-webkit-input-placeholder{
             opacity: 0; 
@@ -214,6 +208,7 @@ $searchHolderTextColor: #fff;
 }
 
 .textareaView{
+    display: block;
     width: pxToRem(340px);
     margin: 0 auto;
     position: relative;

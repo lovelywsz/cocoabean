@@ -340,7 +340,7 @@ html {
     background: #ccc;
     border-color: transparent; }
 
-/*Colors*/
+/*text colors*/
 .btn-primary.btn-text-red {
   color: #FE3824; }
 
@@ -366,6 +366,7 @@ html {
   .navigation .navRight {
     position: absolute;
     top: 0;
+    z-index: 999;
     height: 2.75rem;
     line-height: 2.75rem; }
   .navigation .navLeft {

@@ -228,6 +228,7 @@ html {
   .navigation .navRight {
     position: absolute;
     top: 0;
+    z-index: 999;
     height: 2.75rem;
     line-height: 2.75rem; }
   .navigation .navLeft {
@@ -287,6 +288,7 @@ $wrapName：列表最外层类名 $itemName：flex父类类名 $flexName flex子
 $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐方式
 */
 .baseList {
+  padding-top: 2.1875rem;
   box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #dbdbdb; }
   .iosx2 .baseList {
@@ -295,12 +297,12 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
     border-bottom: 0.35714px solid #dbdbdb; }
   .baseList h2 {
     padding-left: 0.9375rem;
-    height: 1.75rem;
-    line-height: 1.75rem;
-    font-size: 1rem;
-    color: #030303; }
+    height: 1.25rem;
+    vertical-align: top;
+    font-size: 0.875rem;
+    color: #8F8E94; }
     .baseList h2 .sub {
-      font-size: 0.875rem;
+      font-size: 0.75rem;
       color: #8F8E94; }
   .baseList .listWrap {
     background: #fff; }
@@ -321,7 +323,8 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
     /*项目在交叉轴上如何对齐*/
     -ms-flex-align: center;
         align-items: center;
-    padding: 0.4375rem 0.9375rem;
+    padding: 0 0.9375rem 0 0;
+    margin-left: 0.9375rem;
     border-bottom: 1px solid #dbdbdb; }
     .iosx2 .baseList .item {
       border-bottom: 0.5px solid #dbdbdb; }
@@ -356,6 +359,7 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
     color: #8F8E94; }
 
 .textImgList {
+  padding-top: 2.1875rem;
   box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid #dbdbdb; }
   .iosx2 .textImgList {
@@ -364,12 +368,12 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
     border-bottom: 0.35714px solid #dbdbdb; }
   .textImgList h2 {
     padding-left: 0.9375rem;
-    height: 1.75rem;
-    line-height: 1.75rem;
-    font-size: 1rem;
-    color: #030303; }
+    height: 1.25rem;
+    vertical-align: top;
+    font-size: 0.875rem;
+    color: #8F8E94; }
     .textImgList h2 .sub {
-      font-size: 0.875rem;
+      font-size: 0.75rem;
       color: #8F8E94; }
   .textImgList .listWrap {
     background: #fff; }
@@ -390,7 +394,8 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
     /*项目在交叉轴上如何对齐*/
     -ms-flex-align: center;
         align-items: center;
-    padding: 0.4375rem 0.9375rem;
+    padding: 0 0.9375rem 0 0;
+    margin-left: 0.9375rem;
     border-bottom: 1px solid #dbdbdb; }
     .iosx2 .textImgList .item {
       border-bottom: 0.5px solid #dbdbdb; }

@@ -19,6 +19,10 @@ var paths = {
         src  : path.join(cocoabean.src, 'sass/**/*.scss'),
         dest : path.join(cocoabean.dest, 'css/')
     },
+    js: {
+        src  : path.join(cocoabean.src, 'js/**/*.js'),
+        dest : path.join(cocoabean.dest, 'js/')
+    },
     svg: {
         src  : path.join(cocoabean.src, 'svg/**/*.svg'),
         dest : path.join(cocoabean.dest, 'images/')
@@ -42,7 +46,12 @@ gulp.task('sass', function() {
     .pipe(gulp.dest(paths.css.dest))//写入目标目录
     .pipe(reload({ stream:true })); // 注入刷新页面
 });
-
+//压缩js
+gulp.task('js', function () {
+    return gulp.src(paths.js.src)
+    .pipe(plugins.uglify())
+    .pipe(gulp.dest(paths.js.dest))
+});
 //创建图标字体
 gulp.task('iconFont', function() {
    gulp.src(paths.font.src)
@@ -85,7 +94,7 @@ gulp.task('autoSprite',function() {
 });
 
 //同步
-gulp.task('sync', ['autoSprite','sass','iconFont'], function() {
+gulp.task('sync', ['autoSprite','sass','iconFont','js'], function() {
     browserSync({
         server: {
             baseDir: './',

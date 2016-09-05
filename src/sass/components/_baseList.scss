@@ -3,18 +3,18 @@ $wrapName：列表最外层类名 $itemName：flex父类类名 $flexName flex子
 $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐方式
 */
 @mixin flexList($wrapName:wrap,$itemName:item,$flexName:flex,$attrName:attr,$justifyContent:flex-start,$alignItems: stretch){
+    padding-top: pxToRem(35px);
     box-shadow: 0 1px 2px -1px rgba(black,0.1);
     @include border(border-bottom,1px,solid,$colorBorder);
     h2{
         padding-left: pxToRem(15px);
-        height: pxToRem(28px);
-        line-height: pxToRem(28px);
-        font-size: $font16;
-        color: $colorText;
+        height: pxToRem(20px);
+        vertical-align: top;
+        font-size: $font14;
+        color: $colorSubText;
         .sub{
-           font-size: $font14;
-            color: $colorSubText;
- 
+           font-size: $font12;
+            color: $colorSubText;     
         }
     }
     .#{$wrapName}{
@@ -23,10 +23,11 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
     .#{$itemName}{
         box-sizing: border-box;
         @include flexContent(row,nowrap,$justifyContent,$alignItems);
-        padding: pxToRem(7px) pxToRem(15px);
+        padding: 0 pxToRem(15px) 0 0;
+        margin-left: pxToRem(15px);
         @include border(border-bottom,1px,solid,$colorBorder);
         &:last-child{
-            border:none;
+            border:none;  
         }
     }
     .#{$flexName}{
