@@ -1,0 +1,45 @@
+.toastWrap{
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: $zIndexOverlay;
+    -webkit-backdrop-filter:blur(10px);
+    @include animation-fade-in(fade,0,1);
+    .overlay{
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: $zIndexOverlay;
+        background:$colorOverlay;
+    }
+    .toast{
+        width: pxToRem(120px);
+        height: pxToRem(120px);
+        position: relative;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 13px;
+        overflow: hidden;
+        z-index: $zIndexContent;
+        @include flexContent(column,nowrap,center,center);
+        .content{
+            text-align: center;
+            .#{$preIconFont}{
+                font-size: $font20;
+                color: #fff;
+            }
+            p{
+                margin-top:pxToRem(6px);
+                font-size: $font17;
+                color: #fff;
+            }
+        }
+    }
+    &.active{
+       @include flexContent(column,nowrap,center,center);
+    }
+}

@@ -4,13 +4,22 @@ $(function() {
         //$(this).toggleClass('active');
     });
     $('.alertBtn').on('click', function(){
-        var $dialogWrap = $('.alertWrap');
+        var $alertWrap = $('.alertWrap');
         var index = $(this).index();
         console.log(index);
-        $dialogWrap.removeClass('active').eq(index-1).addClass('active')
+        $alertWrap.removeClass('active').eq(index-1).addClass('active')
         .on('click',function(){
             $(this).removeClass('active');
         });
+    });
+    $('.toastBtn').on('click', function(){
+        var $toastWrap = $('.toastWrap');
+        var index = $(this).index();
+        console.log(index);
+        $toastWrap.removeClass('active').eq(index-1).addClass('active')
+        setTimeout(function(){
+            $toastWrap.removeClass('active')
+        },2000)
     });
     $('.actionSheetBtn').on('click', function(){
         $('.actionSheetWrap')

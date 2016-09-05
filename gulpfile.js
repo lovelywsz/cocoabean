@@ -102,7 +102,7 @@ gulp.task('sync', ['autoSprite','sass','iconFont','js'], function() {
         }
     });
     gulp.watch(paths.css.src, ['sass']);
-    gulp.watch([paths.html.src, paths.css.src], reload);
+    gulp.watch([paths.html.src, paths.js.src, paths.css.src], reload);
 });
 
 //执行命令

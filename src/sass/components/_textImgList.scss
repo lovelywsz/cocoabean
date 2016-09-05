@@ -1,6 +1,7 @@
 .textImgList{
     @include flexList(listWrap,item,info,attr,center,center);
     .item{
+        padding-top: pxToRem(15px); 
         min-height: pxToRem(45px);  
         &.verTopImg{
             -webkit-box-align: start;
@@ -9,10 +10,11 @@
         }  
     }
     .info{
+        padding-bottom: pxToRem(15px);
         font-size: $font17;
         line-height: pxToRem(22px);
         .subtitle{
-            font-size: $font15;
+            font-size: $font14;
             color: $colorSubText;  
             line-height: pxToRem(20px);
         }

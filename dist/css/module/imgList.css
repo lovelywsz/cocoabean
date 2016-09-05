@@ -373,15 +373,17 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
   .iosx3 .imgList {
     border-bottom: 0.35714px solid #dbdbdb; }
   .imgList h2 {
+    padding-top: 2.1875rem;
     padding-left: 0.9375rem;
-    height: 1.75rem;
-    line-height: 1.75rem;
+    height: 1.25rem;
+    vertical-align: top;
     font-size: 1rem;
     color: #030303; }
     .imgList h2 .sub {
       font-size: 0.875rem;
       color: #8F8E94; }
   .imgList .listWrap {
+    padding-bottom: 0.9375rem;
     box-sizing: border-box;
     background: #fff;
     display: -ms-flexbox;
@@ -400,7 +402,7 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
     -ms-flex-align: center;
         align-items: center; }
     .imgList .listWrap .item {
-      margin-top: 0.625rem; }
+      padding-top: 0.9375rem; }
     .imgList .listWrap.twoPart .item {
       width: 50%; }
     .imgList .listWrap.threePart .item {
@@ -413,8 +415,7 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
       height: 5.625rem; }
       .imgList .listWrap .img img {
         width: 100%;
-        height: 100%;
-        border-radius: 50%; }
+        height: 100%; }
     .imgList .listWrap .info {
       text-align: center;
       font-size: 0.875rem;

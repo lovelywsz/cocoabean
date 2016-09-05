@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toast</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script src="../../dist/js/device.js"></script>
+    <script src="../../dist/js/jquery-2.2.3.min.js"></script>
+    <script src="../../dist/js/script.js"></script>
+    <link rel="stylesheet" href="../../dist/css/module/toast.css">
+    <style type="text/css" media="screen">
+       .textContent{background: #fff;padding: 15px;line-height: 20px;} 
+       .toastBtn{text-align: center;}
+       .toastBtn a{margin:15px 0;}
+    </style>
+</head>
+<body>
+<header class="navigation">
+    <div class="navLeft">
+        <span class="iconFont iconFont-back"></span>
+    </div>
+    <div class="title">
+        <h2>Toast</h2>
+    </div>
+</header>
+<main class="mainWrap">
+    <div class="textContent">
+        <p>本质的东西是用眼睛看不见的，只能用心去看。正因为你为你的玫瑰花费的时光，才使得你的玫瑰变得如此重要。对你驯养过的东西，你永远都有责任。你必须对你的玫瑰负责。</p>
+        <p class="toastBtn">
+            <a href="javascript:;"  class="btn btn-block btn-primary">提示信息</a>
+        </p>
+        <p class="toastBtn">
+            <a href="javascript:;"  class="btn btn-block btn-primary">提示信息</a>
+        </p>
+        <p class="toastBtn">
+            <a href="javascript:;"  class="btn btn-block btn-primary">提示信息</a>
+        </p>
+    </div>
+</main>
+<section class="toastWrap">
+    <div class="overlay"></div>
+    <div class="toast fade-in">
+        <main class="content">
+            <p>提示信息</p>
+        </main>
+    </div>
+</section>
+<section class="toastWrap">
+    <div class="overlay"></div>
+    <div class="toast fade-in">
+        <main class="content">
+            <span class="iconFont iconFont-stop"></span>
+            <p>提示信息</p>
+        </main>
+    </div>
+</section>
+<section class="toastWrap">
+    <div class="overlay"></div>
+    <div class="toast fade-in">
+        <main class="content">
+            <span class="iconFont iconFont-check"></span>
+            <p>提示信息</p>
+        </main>
+    </div>
+</section>
+</body>
+</html>

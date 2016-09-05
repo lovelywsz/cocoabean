@@ -9,8 +9,7 @@
     animation-fill-mode: both;
 }
 
-// fade in/out
-//-----------------------------------------------------
+// fade in/out -----------------------------------------------------
 @mixin animation-fade-in($className: fade, $from: 0, $to: 1) {
     $name: str-insert(In, $className, 0);
 
@@ -36,8 +35,7 @@
         100% { opacity: $to; }
     }
 }
-// down in/out
-//-----------------------------------------------------
+// down in/out -----------------------------------------------------
 
 @mixin animation-down-in($className: down, $value: 100%) {
     $name: str-insert(In, $className, 0);
@@ -79,8 +77,7 @@
     }
 }
 
-// up in/out
-//-----------------------------------------------------
+// up in/out -----------------------------------------------------
 
 @mixin animation-up-in($className: up, $value: -100%) {
     $name: str-insert(In, $className, 0);

@@ -794,6 +794,7 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
   display: block;
   margin: 0 auto;
   position: relative;
+  width: 21.5625rem;
   color: #c7c7cd; }
   .textareaView textarea {
     width: 100%;
@@ -810,12 +811,12 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
       border: 0.5px solid #dbdbdb; }
     .iosx3 .textareaView textarea {
       border: 0.35714px solid #dbdbdb; }
-  .textareaView .tips {
+  .textareaView .tipsWrap {
     position: absolute;
     bottom: 0.5rem;
     right: 0.5rem;
     font-size: 0.6875rem; }
-    .textareaView .tips .btn-round {
+    .textareaView .tipsWrap .btn-round {
       vertical-align: middle;
       font-size: 0.45455rem; }
 

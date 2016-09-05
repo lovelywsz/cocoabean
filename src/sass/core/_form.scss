@@ -211,6 +211,7 @@ $searchHolderTextColor: #bbbbc1;
     display: block;
     margin: 0 auto;
     position: relative;
+    width: pxToRem(345px);
     color: $colorPlaceholder;
     textarea{
         width: 100%;
@@ -224,7 +225,7 @@ $searchHolderTextColor: #bbbbc1;
         min-height: pxToRem(100px);
         box-shadow:inset 0 1px 2px -1px rgba(black,.25) ;
     }
-    .tips{
+    .tipsWrap{
         position: absolute;
         bottom: pxToRem(8px);
         right: pxToRem(8px);

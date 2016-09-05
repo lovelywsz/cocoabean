@@ -121,6 +121,10 @@ input[type="search"]::-webkit-search-decoration {
 * @package animation
 *
 */
+.toastWrap .fade-in {
+  animation-duration: 0.5s;
+  animation-fill-mode: both; }
+
 html {
   background: #efeff4;
   font-size: 16px; }
@@ -216,6 +220,147 @@ html {
 .iconFont-wishlist::before {
   content: "\EA18"; }
 
+/**
+* button
+*/
+[class^="btn"] {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; }
+
+.btn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0;
+  min-width: 4.6875rem;
+  height: 1.625rem;
+  line-height: 1.625rem;
+  font-size: 0.8125rem;
+  border-radius: 0.1875rem;
+  text-align: center;
+  outline: 0; }
+  .btn.btn-block {
+    width: 100%;
+    height: 3.125rem;
+    line-height: 3.125rem;
+    display: block;
+    font-size: 1.0625rem; }
+
+.btn-round {
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 50%;
+  width: 1.375em;
+  height: 1.375em;
+  font-size: 1rem;
+  position: relative; }
+  .btn-round:active .iconFont {
+    opacity: 0.6; }
+  .btn-round .iconFont {
+    font-size: 0.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; }
+
+/*按钮名称 文字色 背景色 边框大小 边框颜色 激活文字色 激活背景色 激活边框*/
+.btn-primary {
+  color: #0076FF;
+  background: transparent;
+  border: 1px solid #0076FF; }
+  .iosx2 .btn-primary {
+    border: 0.5px solid #0076FF; }
+  .iosx3 .btn-primary {
+    border: 0.35714px solid #0076FF; }
+  .btn-primary:active {
+    background: #0076FF;
+    border-color: #0076FF;
+    color: #fff; }
+  .btn-primary:disabled, .btn-primary.btn-disabled {
+    color: rgba(0, 118, 255, 0.3); }
+  .btn-primary:disabled:active, .btn-primary.btn-disabled:active {
+    background: transparent;
+    border-color: #0076FF; }
+
+.btn-green {
+  color: #fff;
+  background: #4cd864;
+  border: 0 solid transparent; }
+  .iosx2 .btn-green {
+    border: 0 solid transparent; }
+  .iosx3 .btn-green {
+    border: 0 solid transparent; }
+  .btn-green:active {
+    background: #4cd864;
+    border-color: transparent;
+    color: #fff; }
+  .btn-green:disabled, .btn-green.btn-disabled {
+    color: rgba(255, 255, 255, 0.3); }
+  .btn-green:disabled:active, .btn-green.btn-disabled:active {
+    background: #4cd864;
+    border-color: transparent; }
+
+.btn-blue {
+  color: #fff;
+  background: #0076FF;
+  border: 0 solid transparent; }
+  .iosx2 .btn-blue {
+    border: 0 solid transparent; }
+  .iosx3 .btn-blue {
+    border: 0 solid transparent; }
+  .btn-blue:active {
+    background: #0076FF;
+    border-color: transparent;
+    color: #fff; }
+  .btn-blue:disabled, .btn-blue.btn-disabled {
+    color: rgba(255, 255, 255, 0.3); }
+  .btn-blue:disabled:active, .btn-blue.btn-disabled:active {
+    background: #0076FF;
+    border-color: transparent; }
+
+.btn-red {
+  color: #fff;
+  background: #FE3824;
+  border: 0 solid transparent; }
+  .iosx2 .btn-red {
+    border: 0 solid transparent; }
+  .iosx3 .btn-red {
+    border: 0 solid transparent; }
+  .btn-red:active {
+    background: #FE3824;
+    border-color: transparent;
+    color: #fff; }
+  .btn-red:disabled, .btn-red.btn-disabled {
+    color: rgba(255, 255, 255, 0.3); }
+  .btn-red:disabled:active, .btn-red.btn-disabled:active {
+    background: #FE3824;
+    border-color: transparent; }
+
+.btn-gray {
+  color: #fff;
+  background: #ccc;
+  border: 0 solid transparent; }
+  .iosx2 .btn-gray {
+    border: 0 solid transparent; }
+  .iosx3 .btn-gray {
+    border: 0 solid transparent; }
+  .btn-gray:active {
+    background: #ccc;
+    border-color: transparent;
+    color: #fff; }
+  .btn-gray:disabled, .btn-gray.btn-disabled {
+    color: rgba(255, 255, 255, 0.3); }
+  .btn-gray:disabled:active, .btn-gray.btn-disabled:active {
+    background: #ccc;
+    border-color: transparent; }
+
+/*text colors*/
+.btn-primary.btn-text-red {
+  color: #FE3824; }
+
+.btn-primary.btn-text-blue {
+  color: #0076FF; }
+
 .navigation {
   position: fixed;
   left: 0;
@@ -290,107 +435,44 @@ html {
     transform: translate(-50%, -50%);
     width: 9.5rem; }
 
-/**
-$wrapName：列表最外层类名 $itemName：flex父类类名 $flexName flex子类类名 $attrName右边附属信息类名 
-$justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐方式
-*/
-.baseList {
-  padding-top: 2.1875rem;
-  box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid #dbdbdb; }
-  .iosx2 .baseList {
-    border-bottom: 0.5px solid #dbdbdb; }
-  .iosx3 .baseList {
-    border-bottom: 0.35714px solid #dbdbdb; }
-  .baseList h2 {
-    padding-left: 0.9375rem;
-    height: 1.25rem;
-    vertical-align: top;
-    font-size: 0.875rem;
-    color: #8F8E94; }
-    .baseList h2 .sub {
-      font-size: 0.75rem;
-      color: #8F8E94; }
-  .baseList .listWrap {
-    background: #fff; }
-  .baseList .item {
-    box-sizing: border-box;
-    display: -ms-flexbox;
-    display: flex;
-    /*主轴方向*/
-    -ms-flex-direction: row;
-        flex-direction: row;
-    /*换行*/
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    /*flex-flow属性是flex-direction和flex-wrap的简写形式，默认值为row nowrap*/
-    /*项目在主轴上的对齐方式*/
-    -ms-flex-pack: center;
-        justify-content: center;
-    /*项目在交叉轴上如何对齐*/
-    -ms-flex-align: center;
-        align-items: center;
-    padding: 0 0.9375rem 0 0;
-    margin-left: 0.9375rem;
-    border-bottom: 1px solid #dbdbdb; }
-    .iosx2 .baseList .item {
-      border-bottom: 0.5px solid #dbdbdb; }
-    .iosx3 .baseList .item {
-      border-bottom: 0.35714px solid #dbdbdb; }
-    .baseList .item:last-child {
-      border: none; }
-  .baseList .info {
-    -ms-flex: 1;
-        flex: 1;
-    width: 0%; }
-    .baseList .info a {
-      display: block;
-      color: #030303; }
-  .baseList .attr {
-    -ms-flex: none;
-        flex: none;
-    font-size: 0.9375rem;
-    color: #8F8E94; }
-    .baseList .attr .iconFont {
-      font-size: 1rem;
-      width: 1.25rem;
-      text-align: right;
-      vertical-align: top; }
-    .baseList .attr a {
-      display: block;
-      color: #030303; }
-  .baseList .item {
-    min-height: 2.8125rem; }
-  .baseList .info .subtitle {
-    font-size: 0.875rem;
-    color: #8F8E94; }
+.toastWrap {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3000;
+  -webkit-backdrop-filter: blur(10px); }
+  .toastWrap .fade-in {
+    animation-name: fadeIn; }
 
-.textImgList {
-  padding-top: 2.1875rem;
-  box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid #dbdbdb; }
-  .iosx2 .textImgList {
-    border-bottom: 0.5px solid #dbdbdb; }
-  .iosx3 .textImgList {
-    border-bottom: 0.35714px solid #dbdbdb; }
-  .textImgList h2 {
-    padding-left: 0.9375rem;
-    height: 1.25rem;
-    vertical-align: top;
-    font-size: 0.875rem;
-    color: #8F8E94; }
-    .textImgList h2 .sub {
-      font-size: 0.75rem;
-      color: #8F8E94; }
-  .textImgList .listWrap {
-    background: #fff; }
-  .textImgList .item {
-    box-sizing: border-box;
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  .toastWrap .overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3000;
+    background: rgba(0, 0, 0, 0.7); }
+  .toastWrap .toast {
+    width: 7.5rem;
+    height: 7.5rem;
+    position: relative;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 13px;
+    overflow: hidden;
+    z-index: 4000;
     display: -ms-flexbox;
     display: flex;
     /*主轴方向*/
-    -ms-flex-direction: row;
-        flex-direction: row;
+    -ms-flex-direction: column;
+        flex-direction: column;
     /*换行*/
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -400,56 +482,29 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
         justify-content: center;
     /*项目在交叉轴上如何对齐*/
     -ms-flex-align: center;
-        align-items: center;
-    padding: 0 0.9375rem 0 0;
-    margin-left: 0.9375rem;
-    border-bottom: 1px solid #dbdbdb; }
-    .iosx2 .textImgList .item {
-      border-bottom: 0.5px solid #dbdbdb; }
-    .iosx3 .textImgList .item {
-      border-bottom: 0.35714px solid #dbdbdb; }
-    .textImgList .item:last-child {
-      border: none; }
-  .textImgList .info {
-    -ms-flex: 1;
-        flex: 1;
-    width: 0%; }
-    .textImgList .info a {
-      display: block;
-      color: #030303; }
-  .textImgList .attr {
-    -ms-flex: none;
-        flex: none;
-    font-size: 0.9375rem;
-    color: #8F8E94; }
-    .textImgList .attr .iconFont {
-      font-size: 1rem;
-      width: 1.25rem;
-      text-align: right;
-      vertical-align: top; }
-    .textImgList .attr a {
-      display: block;
-      color: #030303; }
-  .textImgList .item {
-    padding-top: 0.9375rem;
-    min-height: 2.8125rem; }
-    .textImgList .item.verTopImg {
-      -ms-flex-align: start;
-          -ms-grid-row-align: flex-start;
-          align-items: flex-start; }
-  .textImgList .info {
-    padding-bottom: 0.9375rem;
-    font-size: 1.0625rem;
-    line-height: 1.375rem; }
-    .textImgList .info .subtitle {
-      font-size: 0.875rem;
-      color: #8F8E94;
-      line-height: 1.25rem; }
-  .textImgList .avator {
-    width: 2.8125rem;
-    height: 2.8125rem;
-    margin-right: 0.75rem; }
-    .textImgList .avator img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%; }
+        align-items: center; }
+    .toastWrap .toast .content {
+      text-align: center; }
+      .toastWrap .toast .content .iconFont {
+        font-size: 1.25rem;
+        color: #fff; }
+      .toastWrap .toast .content p {
+        margin-top: 0.375rem;
+        font-size: 1.0625rem;
+        color: #fff; }
+  .toastWrap.active {
+    display: -ms-flexbox;
+    display: flex;
+    /*主轴方向*/
+    -ms-flex-direction: column;
+        flex-direction: column;
+    /*换行*/
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    /*flex-flow属性是flex-direction和flex-wrap的简写形式，默认值为row nowrap*/
+    /*项目在主轴上的对齐方式*/
+    -ms-flex-pack: center;
+        justify-content: center;
+    /*项目在交叉轴上如何对齐*/
+    -ms-flex-align: center;
+        align-items: center; }
