@@ -120,7 +120,8 @@ html {
   font-size: 16px; }
 
 .mainWrap {
-  margin-top: 2.75rem; }
+  margin-top: 2.75rem;
+  margin-bottom: 3.0625rem; }
 
 .normalPanel {
   padding: 1.25rem;
@@ -640,7 +641,6 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
 
 .textareaView {
   display: block;
-  width: 21.25rem;
   margin: 0 auto;
   position: relative;
   color: #c7c7cd; }
@@ -653,7 +653,7 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
     resize: none;
     border-radius: 0.1875rem;
     outline: none;
-    min-height: 4.375rem;
+    min-height: 6.25rem;
     box-shadow: inset 0 1px 2px -1px rgba(0, 0, 0, 0.25); }
     .iosx2 .textareaView textarea {
       border: 0.5px solid #dbdbdb; }

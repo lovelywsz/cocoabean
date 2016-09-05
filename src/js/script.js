@@ -20,8 +20,7 @@ $(function() {
         });
     });
     $('.navLeft').on('click', function() {
-        console.log("dfsf");
-        window.location.href = '../index.html' ;
-        //window.history.back();
+        //window.location.href = '../page/index.html' ;
+        window.history.back();
     })
 })
