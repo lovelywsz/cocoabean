@@ -115,6 +115,16 @@ input[type="search"]::-webkit-search-decoration {
     padding-left: 20px;
     padding-right: 20px; } }
 
+/**
+* @author lovelywsz@163.com
+* @date 20160905
+* @package animation
+*
+*/
+.actionSheetWrap .down-in {
+  animation-duration: 0.5s;
+  animation-fill-mode: both; }
+
 html {
   background: #efeff4;
   font-size: 16px; }
@@ -304,7 +314,10 @@ html {
   outline: 0; }
   .btn.btn-block {
     width: 100%;
-    display: block; }
+    height: 3.125rem;
+    line-height: 3.125rem;
+    display: block;
+    font-size: 1.0625rem; }
 
 .btn-round {
   display: inline-block;
@@ -497,7 +510,7 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
     font-size: 0.875rem;
     color: #8F8E94; }
 
-.actionSheet {
+.actionSheetWrap {
   display: none;
   position: fixed;
   left: 0;
@@ -505,7 +518,17 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
   bottom: 0;
   z-index: 3000;
   -webkit-backdrop-filter: blur(10px); }
-  .actionSheet .overlay {
+  .actionSheetWrap .down-in {
+    animation-name: downIn; }
+
+@keyframes downIn {
+  0% {
+    opacity: 0;
+    transform: translate(0, 100%); }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0); } }
+  .actionSheetWrap .overlay {
     position: fixed;
     left: 0;
     right: 0;
@@ -513,33 +536,32 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
     bottom: 0;
     z-index: 3000;
     background: rgba(0, 0, 0, 0.7); }
-  .actionSheet .actions .content {
+  .actionSheetWrap .actions .content {
     padding: 0.8125rem 0.9375rem;
     text-align: center;
     border-bottom: 1px solid #dbdbdb; }
-    .iosx2 .actionSheet .actions .content {
+    .iosx2 .actionSheetWrap .actions .content {
       border-bottom: 0.5px solid #dbdbdb; }
-    .iosx3 .actionSheet .actions .content {
+    .iosx3 .actionSheetWrap .actions .content {
       border-bottom: 0.35714px solid #dbdbdb; }
-    .actionSheet .actions .content h2 {
+    .actionSheetWrap .actions .content h2 {
       font-size: 0.8125rem;
       color: #030303; }
-    .actionSheet .actions .content p {
+    .actionSheetWrap .actions .content p {
       margin-top: 0.375rem;
       font-size: 0.8125rem;
       color: #8F8E94; }
-  .actionSheet .cancaelBtn {
+  .actionSheetWrap .cancaelBtn {
     margin: 0.5rem 0; }
-  .actionSheet .actions,
-  .actionSheet .cancaelBtn {
+  .actionSheetWrap .actions,
+  .actionSheetWrap .cancaelBtn {
     width: 22.1875rem;
     position: relative;
     background: #fff;
     border-radius: 13px;
-    overflow: hidden;
-    z-index: 4000; }
-    .actionSheet .actions .btnGroup,
-    .actionSheet .cancaelBtn .btnGroup {
+    overflow: hidden; }
+    .actionSheetWrap .actions .btnGroup,
+    .actionSheetWrap .cancaelBtn .btnGroup {
       display: -ms-flexbox;
       display: flex;
       /*主轴方向*/
@@ -555,8 +577,8 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
       /*项目在交叉轴上如何对齐*/
       -ms-flex-align: center;
           align-items: center; }
-      .actionSheet .actions .btnGroup li,
-      .actionSheet .cancaelBtn .btnGroup li {
+      .actionSheetWrap .actions .btnGroup li,
+      .actionSheetWrap .cancaelBtn .btnGroup li {
         border-bottom: 1px solid #dbdbdb;
         -ms-flex: 1;
             flex: 1;
@@ -564,27 +586,27 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
         width: 100%;
         height: 3.5625rem;
         line-height: 3.5625rem; }
-        .iosx2 .actionSheet .actions .btnGroup li, .iosx2
-        .actionSheet .cancaelBtn .btnGroup li {
+        .iosx2 .actionSheetWrap .actions .btnGroup li, .iosx2
+        .actionSheetWrap .cancaelBtn .btnGroup li {
           border-bottom: 0.5px solid #dbdbdb; }
-        .iosx3 .actionSheet .actions .btnGroup li, .iosx3
-        .actionSheet .cancaelBtn .btnGroup li {
+        .iosx3 .actionSheetWrap .actions .btnGroup li, .iosx3
+        .actionSheetWrap .cancaelBtn .btnGroup li {
           border-bottom: 0.35714px solid #dbdbdb; }
-        .actionSheet .actions .btnGroup li:last-child,
-        .actionSheet .cancaelBtn .btnGroup li:last-child {
+        .actionSheetWrap .actions .btnGroup li:last-child,
+        .actionSheetWrap .cancaelBtn .btnGroup li:last-child {
           border: none; }
-        .actionSheet .actions .btnGroup li a,
-        .actionSheet .cancaelBtn .btnGroup li a {
+        .actionSheetWrap .actions .btnGroup li a,
+        .actionSheetWrap .cancaelBtn .btnGroup li a {
           display: block;
           width: 100%;
           height: 100%;
           text-align: center;
           font-size: 1.25rem;
           color: #0076FF; }
-      .actionSheet .actions .btnGroup .cur a,
-      .actionSheet .cancaelBtn .btnGroup .cur a {
+      .actionSheetWrap .actions .btnGroup .cur a,
+      .actionSheetWrap .cancaelBtn .btnGroup .cur a {
         color: #FE3824; }
-  .actionSheet.active {
+  .actionSheetWrap.active {
     display: -ms-flexbox;
     display: flex;
     /*主轴方向*/
@@ -600,6 +622,8 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
     /*项目在交叉轴上如何对齐*/
     -ms-flex-align: center;
         align-items: center; }
+  .actionSheetWrap .actionSheet {
+    z-index: 4000; }
 
 /**
  * form

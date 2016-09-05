@@ -115,6 +115,16 @@ input[type="search"]::-webkit-search-decoration {
     padding-left: 20px;
     padding-right: 20px; } }
 
+/**
+* @author lovelywsz@163.com
+* @date 20160905
+* @package animation
+*
+*/
+.alertWrap .fade-in {
+  animation-duration: 0.5s;
+  animation-fill-mode: both; }
+
 html {
   background: #efeff4;
   font-size: 16px; }
@@ -230,7 +240,10 @@ html {
   outline: 0; }
   .btn.btn-block {
     width: 100%;
-    display: block; }
+    height: 3.125rem;
+    line-height: 3.125rem;
+    display: block;
+    font-size: 1.0625rem; }
 
 .btn-round {
   display: inline-block;
@@ -431,6 +444,14 @@ html {
   bottom: 0;
   z-index: 3000;
   -webkit-backdrop-filter: blur(10px); }
+  .alertWrap .fade-in {
+    animation-name: fadeIn; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
   .alertWrap .overlay {
     position: fixed;
     left: 0;

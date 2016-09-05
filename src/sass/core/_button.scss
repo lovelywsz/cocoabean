@@ -3,6 +3,7 @@
 */
 $btnWidth:   pxToRem(75px)!default;
 $btnHeight:  pxToRem(26px)!default;
+$btnBlockHeight:  pxToRem(50px)!default;
 $btnBRadius: pxToRem(3px)!default;
 $button: $button;
 $btnIcon : "iconFont" ;
@@ -28,7 +29,10 @@ $btnRoundIconFont:pxToEm(8px)!default;
   outline: 0;
   &.#{$button}-block{
     width: 100%;
+    height: $btnBlockHeight;
+    line-height:$btnBlockHeight;
     display: block;
+    font-size:$font17;
   }
 }
 .#{$button}-round{

@@ -1,11 +1,12 @@
-.actionSheet{
+.actionSheetWrap{
     display: none;
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: $zIndexOverlay;
-    -webkit-backdrop-filter:blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    @include animation-down-in(down,100%);
     .overlay{
         position: fixed;
         left: 0;
@@ -13,11 +14,11 @@
         top: 0;
         bottom: 0;
         z-index: $zIndexOverlay;
-        background:$colorOverlay;
+        background: $colorOverlay;
     }
     .actions{
         .content{
-            padding:pxToRem(13px) pxToRem(15px);
+            padding: pxToRem(13px) pxToRem(15px);
             text-align: center;
             @include border(border-bottom,1px,solid,$colorBorder);
             h2{
@@ -25,7 +26,7 @@
                 color: $colorText;
             }
             p{
-                margin-top:pxToRem(6px);
+                margin-top: pxToRem(6px);
                 font-size: $font13;
                 color: $colorSubText;
             }
@@ -39,7 +40,6 @@
         background: #fff;
         border-radius: 13px;
         overflow: hidden;
-        z-index: $zIndexContent;
         .btnGroup{
             @include flexContent(column,nowrap,center,center);
             li{
@@ -68,6 +68,9 @@
         }
     }
     &.active{
-       @include flexContent(column,nowrap,center,center);
+        @include flexContent(column,nowrap,center,center);
+    }
+    .actionSheet{
+        z-index: $zIndexContent;   
     }
 }

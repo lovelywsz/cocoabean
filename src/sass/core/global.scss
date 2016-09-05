@@ -2,6 +2,7 @@
 @import "config"; //默认变量
 @import "mediaQueries"; //媒体查询
 @import "mixin"; //复合样式
+@import "animation"; //动画
 
 html{
     background:$colorBg;

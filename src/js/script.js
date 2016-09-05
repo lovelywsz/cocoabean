@@ -7,13 +7,13 @@ $(function() {
         var $dialogWrap = $('.alertWrap');
         var index = $(this).index();
         console.log(index);
-        $dialogWrap.removeClass('active').eq(index).addClass('active')
+        $dialogWrap.removeClass('active').eq(index-1).addClass('active')
         .on('click',function(){
             $(this).removeClass('active');
         });
     });
     $('.actionSheetBtn').on('click', function(){
-        $('.actionSheet')
+        $('.actionSheetWrap')
         .addClass('active')
         .on('click', function(){
             $(this).removeClass('active');
