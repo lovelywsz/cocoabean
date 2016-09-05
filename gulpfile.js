@@ -25,6 +25,10 @@ var paths = {
     },
     svg: {
         src  : path.join(cocoabean.src, 'svg/**/*.svg'),
+        dest : path.join(cocoabean.dest, 'iconsvg/')
+    },
+    images: {
+        src  : path.join(cocoabean.src, 'images/**/*.jpg'),
         dest : path.join(cocoabean.dest, 'images/')
     },
     html: {
@@ -51,6 +55,15 @@ gulp.task('js', function () {
     return gulp.src(paths.js.src)
     .pipe(plugins.uglify())
     .pipe(gulp.dest(paths.js.dest))
+});
+//压缩图片
+gulp.task('imgMin', function() {
+    return gulp.src(paths.images.src)
+    .pipe(plugins.imagemin({
+        progressive: true,//类型：Boolean 默认：false 无损压缩jpg图片
+        svgoPlugins: [{removeViewBox: false}],//不要移除svg的viewbox属性
+    }))
+    .pipe(gulp.dest(paths.images.dest));
 });
 //创建图标字体
 gulp.task('iconFont', function() {
@@ -94,7 +107,7 @@ gulp.task('autoSprite',function() {
 });
 
 //同步
-gulp.task('sync', ['autoSprite','sass','iconFont','js'], function() {
+gulp.task('sync', ['autoSprite','sass','iconFont','imgMin','js'], function() {
     browserSync({
         server: {
             baseDir: './',

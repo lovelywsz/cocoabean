@@ -234,7 +234,7 @@ html {
 .iconSvg {
   display: inline-block;
   vertical-align: top;
-  background-image: url("../../images/sprite.svg");
+  background-image: url("../../iconsvg/sprite.svg");
   background-size: 1.875em auto;
   width: 0.625em;
   height: 0.625em;
