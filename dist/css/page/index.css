@@ -619,7 +619,6 @@ $justifyContent: 水平方向的对齐方式 $alignItems: 垂直方向的对齐�
     color: #717171;
     font-size: 1rem; }
   .searchBar input[type="search"] {
-    outline: none;
     -ms-flex: 1;
         flex: 1;
     width: 0%;

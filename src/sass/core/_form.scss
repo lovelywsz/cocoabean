@@ -173,7 +173,6 @@ $searchHolderTextColor: #bbbbc1;
         font-size: $font16;
     }
     input[type="search"]{
-        outline: none;
         @include flexItem;
         width: $searchInputWidth;
         height: $searchInputHeight;
