@@ -173,17 +173,22 @@ $searchHolderTextColor: #bbbbc1;
         font-size: $font16;
     }
     input[type="search"]{
+        outline: none;
         @include flexItem;
         width: $searchInputWidth;
         height: $searchInputHeight;
         padding: $searchInputGap;
-        border: none;
-        -webkit-appearance: none;
-        border-radius: $searchInputRadius;
         background: $searchInputBgColor;
+        border: none;
+        border-radius: $searchInputRadius;
         font-size: $font16;
         color: $searchInputTextColor;
-        text-indent: $searchInputTextGap;   
+        text-indent: $searchInputTextGap;
+        &:focus{
+           &+ .actionBtn{
+                display: block;
+            }
+        }
     }
     input[type="search"]::-webkit-input-placeholder{ 
         color:$searchHolderTextColor;
@@ -196,11 +201,6 @@ $searchHolderTextColor: #bbbbc1;
         height: $searchActionHeight;
         line-height: $searchActionHeight;
         color: $searchActionColor; 
-    }
-    &.active{
-        .actionBtn{
-            display: block;
-        }
     }
 }
 
