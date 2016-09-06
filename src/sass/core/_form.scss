@@ -161,6 +161,7 @@ $searchHolderTextColor: #bbbbc1;
 }
 
 .searchBar{
+    box-sizing:border-box;
     position: relative;
     @include flexContent(row,nowrap,space-between,center);
     .#{$preIconFont}{
@@ -175,7 +176,6 @@ $searchHolderTextColor: #bbbbc1;
         @include flexItem;
         width: $searchInputWidth;
         height: $searchInputHeight;
-        line-height: $searchInputHeight;
         padding: $searchInputGap;
         border: none;
         border-radius: $searchInputRadius;
@@ -185,7 +185,6 @@ $searchHolderTextColor: #bbbbc1;
         text-indent: $searchInputTextGap;   
     }
     input[type="search"]::-webkit-input-placeholder{ 
-        font-family: '#{$fontFamilyName}';
         color:$searchHolderTextColor;
     }
     .actionBtn{
@@ -200,9 +199,6 @@ $searchHolderTextColor: #bbbbc1;
     &.active{
         .actionBtn{
             display: block;
-        }
-        input[type="search"]::-webkit-input-placeholder{
-            opacity: 0; 
         }
     }
 }
