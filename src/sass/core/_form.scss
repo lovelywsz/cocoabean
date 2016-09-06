@@ -178,6 +178,7 @@ $searchHolderTextColor: #bbbbc1;
         height: $searchInputHeight;
         padding: $searchInputGap;
         border: none;
+        -webkit-appearance: none;
         border-radius: $searchInputRadius;
         background: $searchInputBgColor;
         font-size: $font16;
