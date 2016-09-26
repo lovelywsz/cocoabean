@@ -83,11 +83,11 @@ gulp.task('iconFont', function() {
 //自动构建svg雪碧图
 var config            = {
     shape             : {
-        dimension     : {         // Set maximum dimensions 
+        dimension     : {
             maxWidth  : 30,
             maxHeight : 30
         },
-        spacing       : {         // Add padding 
+        spacing       : {
             padding   : 10
         }
     },
