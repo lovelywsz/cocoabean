@@ -114,7 +114,11 @@ input[type="search"]::-webkit-search-decoration {
   .foo {
     padding-left: 20px;
     padding-right: 20px; } }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> origin/master
 html {
   background: #efeff4;
   font-size: 16px; }

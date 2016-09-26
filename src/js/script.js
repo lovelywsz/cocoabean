@@ -1,8 +1,4 @@
 $(function() {
-    $('.searchBar').click(function(){
-        $(this).addClass('active');
-        //$(this).toggleClass('active');
-    });
     $('.alertBtn').on('click', function(){
         var $alertWrap = $('.alertWrap');
         var index = $(this).index();

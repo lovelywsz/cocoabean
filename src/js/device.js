@@ -4,7 +4,6 @@
     var root = document.documentElement;
     var deviceWidth = parseInt(root.clientWidth);
     if(/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)||agent.indexOf("like mac os x") > 0){
-        //ios
         var regStr_saf = /os [\d._]*/gi ;
         var verinfo = agent.match(regStr_saf) ;
         version = (verinfo+"").replace(/[^0-9|_.]/ig,"").replace(/_/ig,".");
@@ -17,8 +16,6 @@
             root.className = 'iosx2';
         }else if(version>=8&& deviceWidth == 414 || deviceWidth == 736){
             root.className = 'iosx3';
-        }else{
-
         }
     }
 })(window);

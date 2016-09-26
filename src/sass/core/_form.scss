@@ -161,6 +161,7 @@ $searchHolderTextColor: #bbbbc1;
 }
 
 .searchBar{
+    box-sizing:border-box;
     position: relative;
     @include flexContent(row,nowrap,space-between,center);
     .#{$preIconFont}{
@@ -175,17 +176,20 @@ $searchHolderTextColor: #bbbbc1;
         @include flexItem;
         width: $searchInputWidth;
         height: $searchInputHeight;
-        line-height: $searchInputHeight;
         padding: $searchInputGap;
+        background: $searchInputBgColor;
         border: none;
         border-radius: $searchInputRadius;
-        background: $searchInputBgColor;
         font-size: $font16;
         color: $searchInputTextColor;
-        text-indent: $searchInputTextGap;   
+        text-indent: $searchInputTextGap;
+        &:focus{
+           &+ .actionBtn{
+                display: block;
+            }
+        }
     }
     input[type="search"]::-webkit-input-placeholder{ 
-        font-family: '#{$fontFamilyName}';
         color:$searchHolderTextColor;
     }
     .actionBtn{
@@ -196,14 +200,6 @@ $searchHolderTextColor: #bbbbc1;
         height: $searchActionHeight;
         line-height: $searchActionHeight;
         color: $searchActionColor; 
-    }
-    &.active{
-        .actionBtn{
-            display: block;
-        }
-        input[type="search"]::-webkit-input-placeholder{
-            opacity: 0; 
-        }
     }
 }
 

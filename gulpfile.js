@@ -51,7 +51,7 @@ gulp.task('sass', function() {
     .pipe(reload({ stream:true })); // 注入刷新页面
 });
 //压缩js
-gulp.task('js', function () {
+gulp.task('jsMin', function () {
     return gulp.src(paths.js.src)
     .pipe(plugins.uglify())
     .pipe(gulp.dest(paths.js.dest))
@@ -107,7 +107,7 @@ gulp.task('autoSprite',function() {
 });
 
 //同步
-gulp.task('sync', ['autoSprite','sass','iconFont','imgMin','js'], function() {
+gulp.task('sync', ['autoSprite','sass','iconFont','imgMin','jsMin'], function() {
     browserSync({
         server: {
             baseDir: './',
