@@ -40,6 +40,12 @@ e、 sass -v
 在sublime text里安装sass插件
 commod+shif+p 选择 package control install ，然后 输入sass / sass build
 
+##项目运行：
+```
+a、 npm install
+b、 gulp
+```
+
 ##框架结构：
 项目根目录
 ```
